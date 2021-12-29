@@ -1,9 +1,12 @@
 import './App.css'
 
+const name = 'ddtReactCourse';
+const element = <h1>Здравствуй, {name}!</h1>;
+
 function App() {
   return (
     <div className="App">
-      <h1>Привет ddtReactCourse!</h1>
+      {element}
       <p>Этот сайт написан на React.</p>
     </div>
   )
