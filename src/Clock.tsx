@@ -11,7 +11,11 @@ function Clock() {
     clockElem = (
       <h2 className="Clock">Время: {new Date().toLocaleTimeString()}.</h2>
     );
-    ReactDOM.render(clockElem, document.getElementById("clock"));
+    ReactDOM.render(
+      <React.StrictMode>
+        {clockElem}
+      </React.StrictMode>,
+      document.getElementById("clock"));
   }
   setInterval(tick, 1000);
 }

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       {element}
-      <p>Этот сайт написан на React.</p>
+      <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
     </div>
   );
 }
