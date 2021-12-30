@@ -3,21 +3,16 @@ import ReactDOM from "react-dom";
 import "./Clock.css";
 
 function Clock() {
-  let clockElem = (
-    <h2 className="Clock">Время: {new Date().toLocaleTimeString()}.</h2>
-  );
-  ReactDOM.render(clockElem, document.getElementById("clock"));
+  const [countDate, setCountDate] = useState(new Date());
+  let timerID = setInterval(function(){tick(), 1000});
   function tick() {
-    clockElem = (
-      <h2 className="Clock">Время: {new Date().toLocaleTimeString()}.</h2>
-    );
-    ReactDOM.render(
-      <React.StrictMode>
-        {clockElem}
-      </React.StrictMode>,
-      document.getElementById("clock"));
+    setCountDate(new Date());
   }
-  setInterval(tick, 1000);
+  return (
+    <div>
+      <h2 className="Clock">Время: {countDate.toLocaleTimeString()}</h2>
+    </div>
+  );
 }
 
 export default Clock;

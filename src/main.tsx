@@ -4,9 +4,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import Clock from "./Clock";
-import Whoim from "./Whoim";
-
-Clock();
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,9 +11,10 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("app")
 );
+
 ReactDOM.render(
   <React.StrictMode>
-    <Whoim />
+    <Clock />
   </React.StrictMode>,
-  document.getElementById("buttonWhoimContainer")
+  document.getElementById("clock")
 );
