@@ -1,6 +1,6 @@
-import './App.css'
+import "./App.css";
 
-const name = 'ddtReactCourse';
+const name = "ddtReactCourse";
 const element = <h1>Здравствуй, {name}!</h1>;
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       {element}
       <p>Этот сайт написан на React.</p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
