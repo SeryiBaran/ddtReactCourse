@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 import App from "./App";
-// import Clock from "./Clock";
+import Clock from "./Clock";
 import Whoim from "./Whoim";
+import StateTest from "./StateTest";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,12 +14,18 @@ ReactDOM.render(
   document.getElementById("app")
 );
 
-// ПОТРЕБЛЯЕТ ОЧЕНЬ МНОГО ОЗУ!!!!!!!!!!!!!!!!!
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Clock />
-//   </React.StrictMode>,
-//   document.getElementById("clock")
-// );
+ReactDOM.render(
+  <React.StrictMode>
+    <Clock />
+  </React.StrictMode>,
+  document.getElementById("clock")
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <StateTest />
+  </React.StrictMode>,
+  document.getElementById("StateTest")
+);
 
 Whoim();
