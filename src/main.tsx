@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 import App from "./App";
-import Clock from "./Clock";
+// import Clock from "./Clock";
 import Whoim from "./Whoim";
 
 ReactDOM.render(
@@ -21,9 +21,4 @@ ReactDOM.render(
 //   document.getElementById("clock")
 // );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Whoim />
-  </React.StrictMode>,
-  document.getElementById("whoimContainer")
-);
+Whoim();
