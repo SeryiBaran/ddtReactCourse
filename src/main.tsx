@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 import "./index.css";
-import App from "./App";
-import Clock from "./Clock";
-import Whoim from "./Whoim";
-import StateTest from "./StateTest";
+import App from "./components/App/App";
+import Clock from "./components/Clock/Clock";
+import Whoim from "./components/Whoim/Whoim";
+import EffectTest from "./components/EffectTest/EffectTest";
+import StateTest from "./components/StateTest/StateTest";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,14 +24,21 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateTest />
+    <Whoim />
   </React.StrictMode>,
-  document.getElementById("StateTest")
+  document.getElementById("whoimContainer")
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Whoim />
+    <EffectTest />
   </React.StrictMode>,
-  document.getElementById("whoimContainer")
+  document.getElementById("EffectTest")
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <StateTest />
+  </React.StrictMode>,
+  document.getElementById("StateTest")
 );
