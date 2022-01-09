@@ -28,4 +28,9 @@ ReactDOM.render(
   document.getElementById("StateTest")
 );
 
-Whoim();
+ReactDOM.render(
+  <React.StrictMode>
+    <Whoim />
+  </React.StrictMode>,
+  document.getElementById("whoimContainer")
+);

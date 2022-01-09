@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "./Clock.css";
 
 class Clock extends React.Component {
+  timerID: any;
+  state: any;
   constructor(props: any) {
     super(props);
     this.state = { date: new Date() };

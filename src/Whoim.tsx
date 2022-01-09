@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import "./Whoim.css";
 
 function Whoim() {
-  let WhoimButtonClickedStatus = false;
+  const [isShowed, isShowedSet] = useState(false);
+  const [buttonIsClicked, buttonIsClickedSet] = useState(false);
   const WhoimButtonNoClicked = (
     <button
       onClick={function () {
@@ -28,42 +29,15 @@ function Whoim() {
     return <p>Я {props.name}!</p>;
   }
   function WhoimButtonClick() {
-    if (WhoimButtonClickedStatus) {
-      WhoimButtonClickedStatus = false;
-    } else {
-      WhoimButtonClickedStatus = true;
-    }
-    WhoimButtonCheckClicked();
+    isShowedSet(!isShowed);
+    buttonIsClickedSet(!buttonIsClicked);
   }
-  const WhoimButtonClickedText = (
+  return (
     <div>
-      <p>Я создал этот сайт, и кто я такой?</p>
-      {WhoimButtonClicked}
-      {WhoimTextP}
+      {buttonIsClicked && WhoimButtonClicked}
+      {!buttonIsClicked && WhoimButtonNoClicked}
+      {isShowed && WhoimTextP}
     </div>
-  );
-  const WhoimButtonNoClickedText = (
-    <div>
-      <p>Я создал этот сайт, и кто я такой?</p>
-      {WhoimButtonNoClicked}
-    </div>
-  );
-  function WhoimButtonCheckClicked() {
-    if (WhoimButtonClickedStatus) {
-      ReactDOM.render(
-        <React.StrictMode>{WhoimButtonClickedText}</React.StrictMode>,
-        document.getElementById("whoimContainer")
-      );
-    } else {
-      ReactDOM.render(
-        <React.StrictMode>{WhoimButtonNoClickedText}</React.StrictMode>,
-        document.getElementById("whoimContainer")
-      );
-    }
-  }
-  ReactDOM.render(
-    <React.StrictMode>{WhoimButtonNoClickedText}</React.StrictMode>,
-    document.getElementById("whoimContainer")
   );
 }
 

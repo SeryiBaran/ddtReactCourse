@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import "./StateTest.css";
 
 class StateTest extends React.Component {
+  timerID: any;
+  state: any;
   constructor(props: any) {
     super(props);
-    this.state = { liveTime: 3,  hide: false};
+    this.state = { liveTime: 3, hide: false};
   }
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
@@ -17,7 +19,7 @@ class StateTest extends React.Component {
     this.setState({
       liveTime: this.state.liveTime - 1,
     });
-    if (!this.state.liveTime > 0) {
+    if (!(this.state.liveTime > 0)) {
       clearInterval(this.timerID);
       this.setState({
         hide: true,
