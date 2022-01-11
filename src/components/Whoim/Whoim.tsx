@@ -1,42 +1,19 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import "./Whoim.css";
 
+const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
+
 function Whoim() {
-  const [isShowed, isShowedSet] = useState(false);
-  const [buttonIsClicked, buttonIsClickedSet] = useState(false);
-  const WhoimButtonNoClicked = (
-    <button
-      onClick={function () {
-        WhoimButtonClick();
-      }}
-    >
-      Открыть мое имя
-    </button>
-  );
-  const WhoimButtonClicked = (
-    <button
-      onClick={function () {
-        WhoimButtonClick();
-      }}
-    >
-      Закрыть мое имя
-    </button>
-  );
-  const WhoimName = "умный пельмешек";
-  const WhoimTextP = <WhoimTextPGen name={WhoimName} />;
-  function WhoimTextPGen(props: any) {
-    return <p>Я {props.name}!</p>;
+  const [whoimButtonIsClicked, setwhoimButtonIsClicked] = useState(false);
+
+  function clickWhoimButton() {
+    setwhoimButtonIsClicked((whoimButtonIsClicked) => !whoimButtonIsClicked);
   }
-  function WhoimButtonClick() {
-    isShowedSet(!isShowed);
-    buttonIsClickedSet(!buttonIsClicked);
-  }
+  
   return (
-    <div>
-      {buttonIsClicked && WhoimButtonClicked}
-      {!buttonIsClicked && WhoimButtonNoClicked}
-      {isShowed && WhoimTextP}
+    <div id="whoimContainer">
+      <button onClick={clickWhoimButton}>{whoimButtonIsClicked ? 'Закрыть' : 'Открыть'} мое имя</button>
+      {whoimButtonIsClicked && whoimText}
     </div>
   );
 }

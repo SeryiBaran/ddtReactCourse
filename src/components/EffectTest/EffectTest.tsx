@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import "./EffectTest.css";
 
 function EffectTest() {
   const [count, setCount] = useState(0);
-  const countParagraph = document.getElementById("countParagraph");
-  let countParagraphText = `Вы нажали на кнопочку ${count} раз`;
-  useEffect(function(){
-    countParagraphText = `Вы нажали на кнопочку ${count} раз`;
+
+  // Я знаю, что наверняка можно было сделать проще, но я хотел хоть куда-нибудь всунуть useEffect
+  let paragraphCountText = `Вы нажали на кнопочку ${count} раз`;
+
+  const onButtonClick = () => {
+    setCount((count) => count + 1);
+  };
+
+  useEffect(() => {
+    paragraphCountText = `Вы нажали на кнопочку ${count} раз`;
   });
+
   return (
-    <div>
-      <button onClick={function(){setCount(count + 1)}}>
-        Нажми меня
-      </button>
-      <p id="countParagraph">{countParagraphText}</p>
+    <div id="effectTest">
+      <button onClick={onButtonClick}>Нажми меня</button>
+      <p>{paragraphCountText}</p>
     </div>
   );
 }

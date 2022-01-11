@@ -7,38 +7,19 @@ import Clock from "./components/Clock/Clock";
 import Whoim from "./components/Whoim/Whoim";
 import EffectTest from "./components/EffectTest/EffectTest";
 import StateTest from "./components/StateTest/StateTest";
+import Indent from "./components/Indent/Indent";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("app")
-);
-
-ReactDOM.render(
-  <React.StrictMode>
+    <Indent />
     <Clock />
-  </React.StrictMode>,
-  document.getElementById("clock")
-);
-
-ReactDOM.render(
-  <React.StrictMode>
+    <Indent />
     <Whoim />
-  </React.StrictMode>,
-  document.getElementById("whoimContainer")
-);
-
-ReactDOM.render(
-  <React.StrictMode>
+    <Indent />
     <EffectTest />
-  </React.StrictMode>,
-  document.getElementById("EffectTest")
-);
-
-ReactDOM.render(
-  <React.StrictMode>
+    <Indent />
     <StateTest />
   </React.StrictMode>,
-  document.getElementById("StateTest")
+  document.getElementById("root")
 );

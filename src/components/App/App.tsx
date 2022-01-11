@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import "./App.css";
 
-const name = "ddtReactCourse";
-const element = <h1>Здравствуй, {name}!</h1>;
+const NAME = "ddtReactCourse";
 
 function App() {
   return (
-    <div className="App">
-      {element}
+    <div id="app" className="app">
+      <h1>Здравствуй, {NAME}!</h1>
       <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
     </div>
   );

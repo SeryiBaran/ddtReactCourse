@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
 import "./StateTest.css";
 
 class StateTest extends React.Component {
@@ -7,7 +6,7 @@ class StateTest extends React.Component {
   state: any;
   constructor(props: any) {
     super(props);
-    this.state = { liveTime: 3, hide: false};
+    this.state = { liveTime: 10, hide: false};
   }
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
@@ -17,9 +16,9 @@ class StateTest extends React.Component {
   }
   tick() {
     this.setState({
-      liveTime: this.state.liveTime - 1,
+      liveTime: this.state.liveTime - 1
     });
-    if (!(this.state.liveTime > 0)) {
+    if (this.state.liveTime < 1) {
       clearInterval(this.timerID);
       this.setState({
         hide: true,
@@ -28,7 +27,7 @@ class StateTest extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div id="stateTest">
         {!this.state.hide && <h2>Эта надпись исчезнет через {this.state.liveTime} секунд!</h2>}
       </div>
     );
