@@ -1,12 +1,15 @@
 {
     "env": {
         "browser": true,
+        "node": true,
         "es2021": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -18,7 +21,8 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
         "indent": ["error", 2],
@@ -28,13 +32,14 @@
         "space-in-parens": "error",
         "no-multiple-empty-lines": "error",
         "prefer-const": "error",
-        "no-use-before-define": "error"
+        "no-use-before-define": "error",
+        "prettier/prettier": ["error"]
     },
     "ignorePatterns": ["*.svg", "*.css"],
     "settings": {
         "react": {
             "pragma": "React",
-            "version": "^17.0.2"
+            "version": "detect"
         }
     }
 }

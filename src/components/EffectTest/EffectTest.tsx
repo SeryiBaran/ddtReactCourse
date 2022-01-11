@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./EffectTest.css";
+import React, { useState, useEffect } from 'react';
+import './EffectTest.css';
 
 function EffectTest() {
   const [count, setCount] = useState(0);
@@ -7,7 +7,7 @@ function EffectTest() {
   let paragraphCountText = `Вы нажали на кнопочку ${count} раз`;
 
   const onButtonClick = () => {
-    setCount((count) => count + 1);
+    setCount(count => count + 1);
   };
 
   // Я знаю, что наверняка можно было сделать проще, но я хотел хоть куда-нибудь всунуть useEffect

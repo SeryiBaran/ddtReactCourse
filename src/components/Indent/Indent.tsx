@@ -1,9 +1,8 @@
-import "./Indent.css";
+import React from 'react';
+import './Indent.css';
 
 function Indent() {
-  return (
-    <div className="indent"></div>
-  );
+  return <div className="indent"></div>;
 }
 
 export default Indent;

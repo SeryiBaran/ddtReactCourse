@@ -1,6 +1,7 @@
-import "./App.css";
+import React from 'react';
+import './App.css';
 
-const NAME = "ddtReactCourse";
+const NAME = 'ddtReactCourse';
 
 function App() {
   return (
