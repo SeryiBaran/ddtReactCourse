@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "string-quotes": null,
+    "value-list-comma-newline-after": null,
+    "declaration-colon-newline-after": null,
+    "no-empty-source": null
+  }
+}

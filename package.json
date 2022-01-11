@@ -5,8 +5,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "alllint": "eslint ./src/**/* && stylelint ./src/**/*.css",
     "jslint": "eslint ./src/**/*",
-    "jslint:fix": "eslint ./src/**/* --fix",
+    "csslint": "stylelint ./src/**/*.css",
     "format": "prettier --write ./src/**/*"
   },
   "dependencies": {

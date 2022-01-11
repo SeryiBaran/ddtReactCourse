@@ -1,13 +1,17 @@
 import React from 'react';
 import './Clock.css';
 
-class Clock extends React.Component {
-  timerID: any;
-  state: any;
+interface isState {
+  date: Date;
+}
+
+class Clock extends React.Component<any, isState> {
+  timerID: number;
 
   constructor(props: any) {
     super(props);
     this.state = { date: new Date() };
+    this.timerID = 0;
   }
 
   componentDidMount() {
