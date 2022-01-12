@@ -33,7 +33,8 @@
         "no-multiple-empty-lines": "error",
         "prefer-const": "error",
         "no-use-before-define": "error",
-        "prettier/prettier": ["error"]
+        "prettier/prettier": ["error"],
+        "@typescript-eslint/no-explicit-any": 0
     },
     "ignorePatterns": ["*.svg", "*.css"],
     "settings": {
