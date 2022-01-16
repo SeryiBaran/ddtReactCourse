@@ -22,7 +22,7 @@ npm install
 npm run build  
 
 
-## How to deploy on Docker  
+## How to deploy on Docker (ONLY on Linux)  
 
 1. Make sure that the node.js, dokker and dokker-compose are installed and working;  
 
