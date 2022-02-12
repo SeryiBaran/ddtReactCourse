@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  justify-content: center;
+}
+.card__content {
+  display: flex;
+  padding: 1.5em;
+  max-width: 30em;
+  flex: 1 1 auto;
+  gap: 1.5em;
+  border-radius: 0.2em;
+  box-shadow: 0 0 0.6em 0.3em rgba(0, 0, 0, 0.2);
+  background-color: #ededed;
+}
+.card__rows {
+  flex: 1 1 auto;
+}

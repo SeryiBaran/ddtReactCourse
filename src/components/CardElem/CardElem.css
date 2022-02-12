@@ -1,0 +1,13 @@
+.cardElem {
+  border: solid 0.1em #cdcdcd;
+  border-radius: 0.5em;
+  margin-bottom: 0.3em;
+  padding: 0.5em;
+}
+.cardElem:last-of-type {
+  margin-bottom: 0;
+}
+.cardElem p {
+  display: flex;
+  justify-content: space-between;
+}
