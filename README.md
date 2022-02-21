@@ -20,16 +20,3 @@ npm install
 
 3. Run command for build:  
 npm run build  
-
-
-## How to deploy on Docker (ONLY on Linux VDS)  
-
-1. Make sure that the node.js, dokker and dokker-compose are installed and working;  
-
-2. Go to the server directory:  
-cd server  
-
-3. Run the script prodocker.sh with administrator rights:  
-sudo sh prodocker.sh  
-
-4. Wait until the script finishes its work. The site has been successfully deployed.  
