@@ -12,7 +12,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: inherit;
 }
-
-.clock {
-  text-align: center;
-}

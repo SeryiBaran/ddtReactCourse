@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-import './CardMood.css';
+import styles from './CardMood.module.css';
 
 function CardMood() {
   const cardMoodInputLimit = 30;
@@ -41,9 +41,9 @@ function CardMood() {
   return (
     <div
       className={[
-        'cardMood',
-        activeInput && 'activeCardMood',
-        !validInput && 'notValid',
+        styles.cardMood,
+        activeInput && styles.activeCardMood,
+        !validInput && styles.notValid,
       ]
         .filter(e => !!e)
         .join(' ')}
@@ -54,14 +54,14 @@ function CardMood() {
       <input
         type="text"
         defaultValue={mood}
-        className="cardMoodInput"
+        className={styles.cardMoodInput}
         {...(!activeInput && { readOnly: true })}
         onKeyDown={e => onKeyDownCardMoodInput(e)}
         onKeyUp={e => onKeyDownCardMoodInput(e)}
         ref={cardMoodInput}
       />
       <button
-        className={['cardMoodButton', activeInput && 'activeCardMoodButton']
+        className={[styles.cardMoodButton, activeInput && styles.activeCardMoodButton]
           .filter(e => !!e)
           .join(' ')}
         {...(activeInput ? { title: 'Применить' } : { title: 'Редактировать' })}

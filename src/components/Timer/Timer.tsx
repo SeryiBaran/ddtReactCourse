@@ -1,10 +1,10 @@
 import React from 'react';
-import './Timer.css';
+import styles from './Timer.module.css';
 import Clock from '../Clock/Clock';
 
 function Timer() {
   return (
-    <h1 className="timer">Время в палате: <Clock /></h1>
+    <h1 className={styles.timer}>Время в палате: <Clock /></h1>
   )
 }
 

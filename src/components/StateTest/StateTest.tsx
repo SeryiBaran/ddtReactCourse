@@ -1,5 +1,5 @@
 import React from 'react';
-import './StateTest.css';
+import styles from './StateTest.module.css';
 
 interface isState {
   liveTime: number;

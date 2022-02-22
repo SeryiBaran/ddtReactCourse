@@ -1,4 +1,4 @@
-import './CardElem.css';
+import styles from './CardElem.module.css';
 
 interface CardElemProps {
   elem: any;
@@ -7,7 +7,7 @@ interface CardElemProps {
 
 function CardElem({elem, elemContent}: CardElemProps) {
   return (
-    <div className="cardElem"> {/* Я думаю можно было классы задавать через props из main.tsx/Card.tsx */}
+    <div className={styles.cardElem}> {/* Я думаю можно было классы задавать через props из main.tsx/Card.tsx */}
       <p><span>{elem}:</span> {elemContent}</p>
     </div>
   );

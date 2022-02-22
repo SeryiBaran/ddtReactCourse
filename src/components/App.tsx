@@ -1,7 +1,7 @@
 import React from 'react';
 
 import photo from '../img/ezh.jpg';
-import './App.css';
+import styles from './App.module.css';
 import Clock from './Clock/Clock';
 import Whoim from './Whoim/Whoim';
 import EffectTest from './EffectTest/EffectTest';
@@ -15,13 +15,13 @@ const NAME = 'ddtReactCourse';
 function App() {
   return (
     <>
-      <div id="app" className="app">
-        <header>
+      <div id="app">
+        <header className={styles.header}>
           <h1>Здравствуй, {NAME}!</h1>
           <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
         </header>
         <Indent />
-        <h2 className="clock">
+        <h2 className={styles.clock}>
           Время: <Clock />
         </h2>
         <Indent />

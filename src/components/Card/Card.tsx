@@ -3,7 +3,7 @@ import React from 'react';
 import CardElem from '../CardElem/CardElem';
 import CardPhoto from '../CardPhoto/CardPhoto';
 import CardMood from '../CardMood/CardMood';
-import './Card.css';
+import styles from './Card.module.css';
 
 interface CardProps {
   name: string;
@@ -28,10 +28,11 @@ function Card({
 }: CardProps) {
 
   return (
-    <div className="card" style={{fontSize: (size.toString() + "rem")}}>
-      <div className="card__content">
+    <div className={styles.card} style={{fontSize: (size.toString() + "rem")}}>
+      {/*<div className="card__content">*/}
+      <div className={styles.card__content}>
         <CardPhoto photoUrl={photo} photoDescription={photoDescription} />
-        <div className="card__rows">
+        <div className={styles.card__rows}>
           <CardElem elem="Имя" elemContent={name} />
           <CardElem elem="Фамилия" elemContent={lastname} />
           <CardElem elem="Пол" elemContent={gender} />

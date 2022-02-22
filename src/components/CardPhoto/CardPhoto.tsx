@@ -1,4 +1,4 @@
-import './CardPhoto.css';
+import styles from './CardPhoto.module.css';
 
 interface CardPhotoProps {
   photoUrl: string;
@@ -7,9 +7,9 @@ interface CardPhotoProps {
 
 function CardPhoto({ photoUrl, photoDescription }: CardPhotoProps) {
   return (
-    <div className="card__photo">
+    <div className={styles.card__photo}>
       <img src={photoUrl} alt="Photo" />
-      <p className="card__description">{photoDescription}</p>
+      <p className={styles.card__description}>{photoDescription}</p>
     </div>
   );
 }

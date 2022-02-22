@@ -1,5 +1,5 @@
 import React from 'react';
-import './Clock.css';
+import styles from './Clock.module.css';
 
 interface isState {
   date: Date;

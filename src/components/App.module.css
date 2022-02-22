@@ -1,4 +1,8 @@
-header {
+.header {
   text-align: center;
   font-size: 18px;
+}
+
+.clock {
+  text-align: center;
 }
