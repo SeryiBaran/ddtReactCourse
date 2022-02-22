@@ -1,7 +1,7 @@
 import './CardElem.css';
 
 interface CardElemProps {
-  elem: string;
+  elem: any;
   elemContent: any;
 }
 

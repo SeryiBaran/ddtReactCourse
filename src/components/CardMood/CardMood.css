@@ -1,0 +1,48 @@
+.cardMood {
+  border: solid 0.1em #cdcdcd;
+  border-radius: 0.5em;
+  display: flex;
+  transition: all 150ms ease-in-out;
+}
+.activeCardMood {
+  transform: scale(1.1);
+  box-shadow: 0em 0em 1.5em 0.8em rgba(0, 0, 0, 0.2);
+}
+.notValid {
+  border: solid red 0.1em;
+}
+.cardMoodInput {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  padding: 0.5em;
+  outline: none;
+  flex: 1 1 auto;
+  border-radius: inherit;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: solid 0.1em #cdcdcd;
+}
+.cardMoodButton {
+  min-width: 2em;
+  cursor: pointer;
+  outline: none;
+  border-radius: inherit;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-image: url('../../img/pencil.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% auto;
+  transition: all 150ms ease-in-out;
+}
+.notValid .cardMoodButton {
+  background-image: url('../../img/notvalid.png');
+  cursor: not-allowed;
+}
+.cardMoodButton:not(.notValid .cardMoodButton):hover {
+  background-color: #d3d3d3;
+}
+.activeCardMoodButton {
+  background-image: url('../../img/check-mark.png');
+}

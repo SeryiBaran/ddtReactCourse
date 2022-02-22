@@ -4,18 +4,18 @@ import './Whoim.css';
 const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
 
 function Whoim() {
-  const [whoimButtonIsClicked, setwhoimButtonIsClicked] = useState(false);
+  const [whoimIsShown, setWhoimIsShown] = useState(false);
 
   function clickWhoimButton() {
-    setwhoimButtonIsClicked(whoimButtonIsClicked => !whoimButtonIsClicked);
+    setWhoimIsShown(whoimIsShown => !whoimIsShown);
   }
 
   return (
     <div id="whoimContainer">
       <button onClick={clickWhoimButton}>
-        {whoimButtonIsClicked ? 'Закрыть' : 'Открыть'} мое имя
+        {whoimIsShown ? 'Закрыть' : 'Открыть'} мое имя
       </button>
-      {whoimButtonIsClicked && whoimText}
+      {whoimIsShown && whoimText}
     </div>
   );
 }

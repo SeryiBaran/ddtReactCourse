@@ -1,5 +1,8 @@
+import React from 'react';
+
 import CardElem from '../CardElem/CardElem';
 import CardPhoto from '../CardPhoto/CardPhoto';
+import CardMood from '../CardMood/CardMood';
 import './Card.css';
 
 interface CardProps {
@@ -34,6 +37,7 @@ function Card({
           <CardElem elem="Пол" elemContent={gender} />
           <CardElem elem="Год рождения" elemContent={birth} />
           <CardElem elem="Диагноз" elemContent={diagnosis} />
+          <CardMood />
         </div>
       </div>
     </div>
