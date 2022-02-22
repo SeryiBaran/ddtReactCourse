@@ -10,7 +10,7 @@ function CardMood() {
   const [mood, setMood] = useState('Напыжился');
 
   const cardMood = useRef<any>(null);
-  const cardMoodInput  = useRef<any>(null);
+  const cardMoodInput = useRef<any>(null);
 
   function toogleAndApplyCardMood() {
     if (validInput) {
@@ -23,10 +23,7 @@ function CardMood() {
     if (
       activeInput &&
       validInput &&
-      (e.code == 'Enter' ||
-        e.keyCode === 13 ||
-        e.code == 'NumpadEnter'
-      )
+      (e.code == 'Enter' || e.keyCode === 13 || e.code == 'NumpadEnter')
     ) {
       e.preventDefault();
       toogleAndApplyCardMood();
@@ -52,6 +49,7 @@ function CardMood() {
         .join(' ')}
       onKeyDown={e => onKeyDownCardMood(e)}
       ref={cardMood}
+      data-tooltip={`Нельзя вводить более ${cardMoodInputLimit} символов!`}
     >
       <input
         type="text"
