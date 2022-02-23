@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import styles from './EffectTest.module.css';
 
 function EffectTest() {
@@ -10,7 +11,7 @@ function EffectTest() {
     setCount(count => count + 1);
   };
 
-  // Я знаю, что наверняка можно было сделать проще, но я хотел хоть куда-нибудь всунуть useEffect
+  // Я знаю, что можно было сделать проще, но я хотел хоть куда-нибудь всунуть useEffect
   useEffect(() => {
     paragraphCountText = `Вы нажали на кнопочку ${count} раз`;
   });

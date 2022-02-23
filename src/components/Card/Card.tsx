@@ -1,9 +1,10 @@
 import React from 'react';
 
+import styles from './Card.module.css';
+
 import CardElem from '../CardElem/CardElem';
 import CardPhoto from '../CardPhoto/CardPhoto';
 import CardMood from '../CardMood/CardMood';
-import styles from './Card.module.css';
 
 interface CardProps {
   name: string;
@@ -16,28 +17,18 @@ interface CardProps {
   size: number;
 }
 
-function Card({
-  name,
-  lastname,
-  birth,
-  gender,
-  diagnosis,
-  photo,
-  photoDescription,
-  size
-}: CardProps) {
+function Card(props: CardProps) {
 
   return (
-    <div className={styles.card} style={{fontSize: (size.toString() + "rem")}}>
-      {/*<div className="card__content">*/}
+    <div className={styles.card} style={{fontSize: (props.size.toString() + "rem")}}>
       <div className={styles.card__content}>
-        <CardPhoto photoUrl={photo} photoDescription={photoDescription} />
+        <CardPhoto photoUrl={props.photo} photoDescription={props.photoDescription} />
         <div className={styles.card__rows}>
-          <CardElem elem="Имя" elemContent={name} />
-          <CardElem elem="Фамилия" elemContent={lastname} />
-          <CardElem elem="Пол" elemContent={gender} />
-          <CardElem elem="Год рождения" elemContent={birth} />
-          <CardElem elem="Диагноз" elemContent={diagnosis} />
+          <CardElem elem="Имя" elemContent={props.name} />
+          <CardElem elem="Фамилия" elemContent={props.lastname} />
+          <CardElem elem="Пол" elemContent={props.gender} />
+          <CardElem elem="Год рождения" elemContent={props.birth} />
+          <CardElem elem="Диагноз" elemContent={props.diagnosis} />
           <CardMood />
         </div>
       </div>

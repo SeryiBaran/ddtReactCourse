@@ -5,10 +5,10 @@ interface CardElemProps {
   elemContent: any;
 }
 
-function CardElem({elem, elemContent}: CardElemProps) {
+function CardElem(props: CardElemProps) {
   return (
-    <div className={styles.cardElem}> {/* Я думаю можно было классы задавать через props из main.tsx/Card.tsx */}
-      <p><span>{elem}:</span> {elemContent}</p>
+    <div className={styles.cardElem}>
+      <p><span>{props.elem}:</span> {props.elemContent}</p>
     </div>
   );
 }

@@ -2,8 +2,9 @@ import React, { useState, useRef } from 'react';
 
 import styles from './CardMood.module.css';
 
+const cardMoodInputLimit = 30;
+
 function CardMood() {
-  const cardMoodInputLimit = 30;
 
   const [activeInput, setActiveInput] = useState(false);
   const [validInput, setValidInput] = useState(true);

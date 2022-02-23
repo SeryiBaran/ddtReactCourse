@@ -2,6 +2,7 @@ import React from 'react';
 
 import photo from '../img/ezh.jpg';
 import styles from './App.module.css';
+
 import Clock from './Clock/Clock';
 import Whoim from './Whoim/Whoim';
 import EffectTest from './EffectTest/EffectTest';

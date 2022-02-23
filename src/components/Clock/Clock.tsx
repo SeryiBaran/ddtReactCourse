@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './Clock.module.css';
 
 interface isState {

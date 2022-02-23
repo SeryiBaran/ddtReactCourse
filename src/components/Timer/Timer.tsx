@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styles from './Timer.module.css';
+
 import Clock from '../Clock/Clock';
 
 function Timer() {
