@@ -18,7 +18,7 @@ function Clock() {
 
   return (
     <>
-      date.toLocaleTimeString()
+      {date.toLocaleTimeString()}
     </>
   );
 }
