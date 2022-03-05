@@ -1,8 +1,8 @@
 .card-elem {
-  border: solid 0.1em #cdcdcd;
-  border-radius: 0.5em;
   margin-bottom: 0.3em;
   padding: 0.5em;
+  border: solid 0.1em #cdcdcd;
+  border-radius: 0.5em;
 }
 
 .card-elem p {

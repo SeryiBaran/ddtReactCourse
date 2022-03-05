@@ -2,8 +2,8 @@
 /*! Based on normalize.css | github.com/necolas/normalize.css */
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   border: 0;
 }
 
@@ -15,11 +15,11 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  line-height: 1;
-  font-size: 14px;
   text-size-adjust: 100%;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1;
 }
 
 h1,
@@ -28,8 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
   font-weight: 400;
+  font-size: inherit;
 }
 
 a,
@@ -52,25 +52,25 @@ ul li {
 .clear-user-agent-styles tr,
 .clear-user-agent-styles th,
 .clear-user-agent-styles td {
+  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-vertical-spacing: 0;
   display: block;
   width: auto;
   height: auto;
   margin: 0;
   padding: 0;
   border: none;
+  border-color: inherit;
   border-collapse: inherit;
   border-spacing: 0;
-  border-color: inherit;
-  vertical-align: inherit;
-  text-align: left;
   font-weight: inherit;
-  -webkit-border-horizontal-spacing: 0;
-  -webkit-border-vertical-spacing: 0;
+  text-align: left;
+  vertical-align: inherit;
 }
 
 html {
-  line-height: 1.15;
   text-size-adjust: 100%;
+  line-height: 1.15;
 }
 
 body {
@@ -82,8 +82,8 @@ main {
 }
 
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 
 hr {
@@ -93,8 +93,8 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
   font-size: 1em;
+  font-family: monospace, monospace;
 }
 
 a {
@@ -115,8 +115,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
   font-size: 1em;
+  font-family: monospace, monospace;
 }
 
 small {
@@ -125,9 +125,9 @@ small {
 
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -148,10 +148,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  margin: 0;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0;
+  font-family: inherit;
 }
 
 button,
@@ -176,8 +176,8 @@ button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 
 button:-moz-focusring,
@@ -193,10 +193,10 @@ fieldset {
 
 legend {
   box-sizing: border-box;
-  color: inherit;
   display: table;
   max-width: 100%;
   padding: 0;
+  color: inherit;
   white-space: normal;
 }
 
