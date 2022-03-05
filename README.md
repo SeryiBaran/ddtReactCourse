@@ -20,3 +20,5 @@ npm install
 
 3. Run command for build:  
 npm run build  
+
+## The rest of the scripts, by type of formatting, are in package.json
