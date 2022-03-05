@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from './CardPhoto.module.css';
 
 interface CardPhotoProps {
@@ -7,9 +9,9 @@ interface CardPhotoProps {
 
 function CardPhoto(props: CardPhotoProps) {
   return (
-    <div className={styles.card__photo}>
+    <div className={styles['card-photo']}>
       <img src={props.photoUrl} alt="Photo" />
-      <p className={styles.card__description}>{props.photoDescription}</p>
+      <p className={styles['card-description']}>{props.photoDescription}</p>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from './CardElem.module.css';
 
 interface CardElemProps {
@@ -7,8 +9,10 @@ interface CardElemProps {
 
 function CardElem(props: CardElemProps) {
   return (
-    <div className={styles.cardElem}>
-      <p><span>{props.elem}:</span> {props.elemContent}</p>
+    <div className={styles['card-elem']}>
+      <p>
+        <span>{props.elem}:</span> {props.elemContent}
+      </p>
     </div>
   );
 }

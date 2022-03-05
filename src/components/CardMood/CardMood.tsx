@@ -5,7 +5,6 @@ import styles from './CardMood.module.css';
 const cardMoodInputLimit = 30;
 
 function CardMood() {
-
   const [activeInput, setActiveInput] = useState(false);
   const [validInput, setValidInput] = useState(true);
   const [mood, setMood] = useState('Напыжился');
@@ -42,9 +41,9 @@ function CardMood() {
   return (
     <div
       className={[
-        styles.cardMood,
-        activeInput && styles.activeCardMood,
-        !validInput && styles.notValid,
+        styles['card-mood'],
+        activeInput && styles['active-card-mood'],
+        !validInput && styles['not-valid'],
       ]
         .filter(e => !!e)
         .join(' ')}
@@ -55,14 +54,17 @@ function CardMood() {
       <input
         type="text"
         defaultValue={mood}
-        className={styles.cardMoodInput}
+        className={styles['card-mood-input']}
         {...(!activeInput && { readOnly: true })}
         onKeyDown={e => onKeyDownCardMoodInput(e)}
         onKeyUp={e => onKeyDownCardMoodInput(e)}
         ref={cardMoodInput}
       />
       <button
-        className={[styles.cardMoodButton, activeInput && styles.activeCardMoodButton]
+        className={[
+          styles['card-mood-button'],
+          activeInput && styles['active-card-mood-button'],
+        ]
           .filter(e => !!e)
           .join(' ')}
         {...(activeInput ? { title: 'Применить' } : { title: 'Редактировать' })}

@@ -9,7 +9,7 @@ import CardMood from '../CardMood/CardMood';
 interface CardProps {
   name: string;
   lastname: string;
-  birth: number|string;
+  birth: number | string;
   gender: string;
   diagnosis: string;
   photo: string;
@@ -18,12 +18,17 @@ interface CardProps {
 }
 
 function Card(props: CardProps) {
-
   return (
-    <div className={styles.card} style={{fontSize: (props.size.toString() + "rem")}}>
-      <div className={styles.card__content}>
-        <CardPhoto photoUrl={props.photo} photoDescription={props.photoDescription} />
-        <div className={styles.card__rows}>
+    <div
+      className={styles['card']}
+      style={{ fontSize: props.size.toString() + 'rem' }}
+    >
+      <div className={styles['card-content']}>
+        <CardPhoto
+          photoUrl={props.photo}
+          photoDescription={props.photoDescription}
+        />
+        <div className={styles['card-rows']}>
           <CardElem elem="Имя" elemContent={props.name} />
           <CardElem elem="Фамилия" elemContent={props.lastname} />
           <CardElem elem="Пол" elemContent={props.gender} />

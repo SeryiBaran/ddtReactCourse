@@ -1,17 +1,21 @@
-.cardMood {
+.card-mood {
   border: solid 0.1em #cdcdcd;
   border-radius: 0.5em;
   display: flex;
   transition: all 150ms ease-in-out;
+  position: relative;
 }
-.activeCardMood {
+
+.active-card-mood {
   transform: scale(1.1);
-  box-shadow: 0em 0em 1.5em 0.8em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.5em 0.8em rgb(0 0 0 / 20%);
 }
-.notValid {
+
+.not-valid {
   border: solid red 0.1em;
 }
-.cardMoodInput {
+
+.card-mood-input {
   background-color: transparent;
   height: 100%;
   width: 100%;
@@ -23,7 +27,8 @@
   border-bottom-right-radius: 0;
   border-right: solid 0.1em #cdcdcd;
 }
-.cardMoodButton {
+
+.card-mood-button {
   min-width: 2em;
   cursor: pointer;
   outline: none;
@@ -36,20 +41,21 @@
   background-size: 70% auto;
   transition: all 150ms ease-in-out;
 }
-.notValid .cardMoodButton {
+
+.not-valid .card-mood-button {
   background-image: url('../../img/notvalid.png');
   cursor: not-allowed;
 }
-.cardMoodButton:not(.notValid .cardMoodButton):hover {
+
+.card-mood-button:not(.not-valid .card-mood-button):hover {
   background-color: #d3d3d3;
 }
-.activeCardMoodButton {
+
+.active-card-mood-button {
   background-image: url('../../img/check-mark.png');
 }
-.cardMood {
-  position: relative;
-}
-.cardMood::after {
+
+.card-mood::after {
   content: attr(data-tooltip);
   position: absolute;
   left: 0;
@@ -57,12 +63,13 @@
   background: #f14747;
   color: #fff;
   padding: 0.5em;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 30%);
   pointer-events: none;
   opacity: 0;
   transition: 150ms;
 }
-.notValid::after {
+
+.not-valid::after {
   opacity: 1;
   top: 3em;
 }

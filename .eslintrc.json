@@ -1,46 +1,45 @@
 {
-    "env": {
-        "browser": true,
-        "node": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended",
-        "prettier"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 13,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "prettier"
-    ],
-    "rules": {
-        "indent": ["error", 2],
-        "no-var": "error",
-        "semi": "error",
-        "no-multi-spaces": "error",
-        "space-in-parens": "error",
-        "no-multiple-empty-lines": "error",
-        "prefer-const": "error",
-        "no-use-before-define": "error",
-        "prettier/prettier": ["error"],
-        "@typescript-eslint/no-explicit-any": 0
-    },
-    "ignorePatterns": ["*.svg", "*.css"],
-    "settings": {
-        "react": {
-            "pragma": "React",
-            "version": "detect"
-        }
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "indent": ["error", 2],
+    "no-var": "error",
+    "semi": "error",
+    "no-multi-spaces": "error",
+    "space-in-parens": "error",
+    "no-multiple-empty-lines": "error",
+    "prefer-const": "error",
+    "no-use-before-define": "error",
+    "prettier/prettier": ["error"],
+    "@typescript-eslint/no-explicit-any": 0,
+    // "@typescript-eslint/no-unused-vars": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  },
+  "ignorePatterns": ["*.svg", "*.css", "*.png", "*.jpg"],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
     }
+  }
 }

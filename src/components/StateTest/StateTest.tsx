@@ -1,50 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './StateTest.module.css';
 
-interface isState {
-  liveTime: number;
-  hide: boolean;
-}
+function StateTest() {
+  const [liveTime, setLiveTime] = useState(3);
+  const [timerID, setTimerID] = useState(0);
 
-class StateTest extends React.Component<any, isState> {
-  timerID: number;
-
-  constructor(props: any) {
-    super(props);
-    this.state = { liveTime: 10, hide: false };
-    this.timerID = 0;
+  function tick() {
+    setLiveTime(liveTime => liveTime - 1);
   }
 
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      liveTime: this.state.liveTime - 1,
-    });
-    if (this.state.liveTime < 1) {
-      clearInterval(this.timerID);
-      this.setState({
-        hide: true,
-      });
+  useEffect(() => {
+    let isMounted = true;
+    if (isMounted) {
+      setTimerID(timerID => setInterval(() => tick(), 1000));
     }
-  }
+    return () => {
+      clearInterval(timerID);
+      isMounted = false;
+    };
+  }, []);
 
-  render() {
-    return (
-      <div id="stateTest">
-        {!this.state.hide && (
-          <h2>Эта надпись исчезнет через {this.state.liveTime} секунд!</h2>
-        )}
-      </div>
-    );
-  }
+  return (
+    <div id="stateTest">
+      {!(liveTime < 1) && (
+        <h2>Эта надпись исчезнет через {liveTime} секунд!</h2>
+      )}
+    </div>
+  );
 }
 
 export default StateTest;

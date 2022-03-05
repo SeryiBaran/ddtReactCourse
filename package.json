@@ -6,8 +6,11 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "alllint": "eslint ./src/**/* && stylelint ./src/**/*.css",
+    "alllint:fix": "eslint ./src/**/* --fix && stylelint ./src/**/*.css --fix",
     "jslint": "eslint ./src/**/*",
     "csslint": "stylelint ./src/**/*.css",
+    "jslint:fix": "eslint ./src/**/* --fix",
+    "csslint:fix": "stylelint ./src/**/*.css --fix",
     "format": "prettier --write ./src/**/*"
   },
   "dependencies": {
@@ -23,8 +26,11 @@
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react": "^7.29.3",
     "prettier": "^2.5.1",
+    "stylelint": "^14.5.3",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0",
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
   }
