@@ -5,10 +5,10 @@
 1. Make sure that the node.js are installed and working;  
 
 2. If NPM dependencies are not installed, install them with the command:  
-npm install  
+`npm install`  
 
 3. Run command for start dev server:  
-npm run dev  
+`npm run dev`  
 
 
 ## How to build  
@@ -16,9 +16,9 @@ npm run dev
 1. Make sure that the node.js are installed and working;  
 
 2. If NPM dependencies are not installed, install them with the command:  
-npm install  
+`npm install`  
 
 3. Run command for build:  
-npm run build  
+`npm run build`  
 
-## The rest of the scripts, by type of formatting, are in package.json
+## The rest of the scripts, by type of formatting, are in `package.json`
