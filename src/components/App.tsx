@@ -10,6 +10,7 @@ import StateTest from './StateTest/StateTest';
 import Card from './Card/Card';
 import Timer from './Timer/Timer';
 import Indent from './Indent/Indent';
+import CatsAPITest from './CatsAPITest/CatsAPITest';
 
 const NAME = 'ddtReactCourse';
 
@@ -43,6 +44,8 @@ function App() {
           size={1}
         />
         <Timer />
+        <Indent />
+        <CatsAPITest />
         <Indent />
       </div>
     </>

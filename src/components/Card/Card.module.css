@@ -5,9 +5,9 @@
 
 .card-content {
   display: flex;
+  flex: 1 1 auto;
   flex-wrap: wrap;
   justify-content: center;
-  flex: 1 1 auto;
   max-width: 30em;
   padding: 1.5em;
   gap: 1.5em;
