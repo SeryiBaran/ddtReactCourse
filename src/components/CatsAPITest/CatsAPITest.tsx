@@ -30,9 +30,9 @@ function CatsAPITest() {
   }, []);
 
   return (
-    <div id="catsAPITest">
+    <div id="cats-api-test">
       <button
-        className={styles['catsAPITest-fetchButton']}
+        className={styles['cats-api-test-fetch-button']}
         onClick={() => {
           fetchData();
         }}
@@ -59,7 +59,7 @@ function CatsAPITest() {
         )}
         {isLoading ? 'Загрузка...' : 'Другой кот'}
       </button>
-      <img className={styles['catsAPITest-img']} src={cat.url} alt="Кот" />
+      <img className={styles['cats-api-test-img']} src={cat.url} alt="Кот" />
     </div>
   );
 }

@@ -2,12 +2,13 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-.catsAPITest-fetchButton {
+.cats-api-test-fetch-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +18,7 @@
   padding: 2rem;
   border-radius: 50rem;
   background-color: #3b5bdb;
-  box-shadow: 0 0.8rem 0 0 rgba(31, 53, 157, 1);
+  box-shadow: 0 0.8rem 0 0 rgb(31 53 157 / 100%);
   color: #edf2ff;
   font-size: 2rem;
   cursor: pointer;
@@ -25,22 +26,17 @@
   transition-property: box-shadow, background, transform, color;
 }
 
-.catsAPITest-fetchButton:active {
+.cats-api-test-fetch-button:active {
   transform: translateY(0.4rem);
-  box-shadow: 0 0.4rem 0 0 rgba(31, 53, 157, 1);
+  box-shadow: 0 0.4rem 0 0 rgb(31 53 157 / 100%);
 }
 
-.catsAPITest-fetchButton:hover {
+.cats-api-test-fetch-button:hover {
   background-color: #364fc7;
   color: #dbe4ff;
 }
 
-.catsAPITest-fetchButton:hover svg {
-  fill: #dbe4ff;
-  background-color: #3b5bdb;
-}
-
-.catsAPITest-fetchButton svg {
+.cats-api-test-fetch-button svg {
   min-width: 3rem;
   min-height: 3rem;
   margin-right: 1rem;
@@ -51,11 +47,12 @@
   transition-property: fill, background;
 }
 
-.catsAPITest-fetchButton:hover .loader {
+.cats-api-test-fetch-button:hover svg {
+  fill: #dbe4ff;
   background-color: #3b5bdb;
 }
 
-.catsAPITest-fetchButton .loader {
+.cats-api-test-fetch-button .loader {
   min-width: 3rem;
   min-height: 3rem;
   margin-right: 1rem;
@@ -67,7 +64,11 @@
   animation: spin 2s linear infinite;
 }
 
-.catsAPITest-img {
+.cats-api-test-fetch-button:hover .loader {
+  background-color: #3b5bdb;
+}
+
+.cats-api-test-img {
   width: 30rem;
   height: 20rem;
   object-fit: contain;
