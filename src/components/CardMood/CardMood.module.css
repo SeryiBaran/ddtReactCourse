@@ -3,6 +3,7 @@
   border: solid 0.1em #cdcdcd;
   border-radius: 0.5em;
   transition: all 150ms ease-in-out;
+  transition-property: transform, box-shadow;
 }
 
 .active-card-mood {
@@ -33,25 +34,27 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   outline: none;
-  background-image: url('../../img/pencil.png');
+  background-image: url('../../img/edit.svg');
   background-position: center;
   background-size: 70% auto;
   background-repeat: no-repeat;
   cursor: pointer;
-  transition: all 150ms ease-in-out;
 }
 
 .not-valid .card-mood-button {
-  background-image: url('../../img/notvalid.png');
+  background-image: url('../../img/alert-circle.svg');
+  background-color: rgba(255, 0, 0, 0.4);
   cursor: not-allowed;
 }
 
 .card-mood-button:not(.not-valid .card-mood-button):hover {
-  background-color: #d3d3d3;
+  background-color: rgba(211, 211, 211, 0.4);
 }
 
 .active-card-mood-button {
-  background-image: url('../../img/check-mark.png');
+  background-image: url('../../img/save.svg');
+  background-position: center;
+  background-size: 70% auto;
 }
 
 .card-mood::after {

@@ -12,6 +12,7 @@ import Timer from './Timer/Timer';
 import Indent from './Indent/Indent';
 import CatsAPITest from './CatsAPITest/CatsAPITest';
 import ChartJsTest from './ChartJsTest/ChartJsTest';
+import InputTest from './InputTest/InputTest';
 
 const NAME = 'ddtReactCourse';
 
@@ -49,6 +50,8 @@ function App() {
         <CatsAPITest />
         <Indent />
         <ChartJsTest />
+        <Indent />
+        <InputTest />
         <Indent />
       </div>
     </>
