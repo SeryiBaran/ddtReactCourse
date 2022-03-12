@@ -4,10 +4,10 @@ import styles from './CardMood.module.css';
 
 const cardMoodInputLimit = 30;
 
-function CardMood() {
-  const [activeInput, setActiveInput] = useState(false);
-  const [validInput, setValidInput] = useState(true);
-  const [mood, setMood] = useState('Напыжился');
+const CardMood: React.FC = () => {
+  const [activeInput, setActiveInput] = useState<boolean>(false);
+  const [validInput, setValidInput] = useState<boolean>(true);
+  const [mood, setMood] = useState<string>('Напыжился');
 
   const cardMoodInput = useRef<any>(null);
 
@@ -70,6 +70,6 @@ function CardMood() {
       />
     </div>
   );
-}
+};
 
 export default CardMood;

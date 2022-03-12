@@ -7,7 +7,7 @@ interface CardElemProps {
   elemContent: any;
 }
 
-function CardElem(props: CardElemProps) {
+const CardElem: React.FC<CardElemProps> = props => {
   return (
     <div className={styles['card-elem']}>
       <p>
@@ -15,6 +15,6 @@ function CardElem(props: CardElemProps) {
       </p>
     </div>
   );
-}
+};
 
 export default CardElem;

@@ -4,9 +4,13 @@ import { Pie } from 'react-chartjs-2';
 
 import styles from './PieCountries.module.css';
 
+interface PieCountriesProps {
+  data: any;
+}
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function PieCountries({ data }: any) {
+const PieCountries: React.FC<PieCountriesProps> = ({ data }) => {
   const chartJsDataBGColors = [
     '#D180139E',
     '#6EAC3B9E',
@@ -54,6 +58,6 @@ function PieCountries({ data }: any) {
   };
 
   return <Pie data={chartJsData} className={styles['pie']} />;
-}
+};
 
 export default PieCountries;

@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import PieCountries from '../PieCountries/PieCountries';
 
-function ChartJsTest() {
+const ChartJsTest: React.FC = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -30,6 +30,6 @@ function ChartJsTest() {
       <PieCountries data={data} />
     </div>
   );
-}
+};
 
 export default ChartJsTest;

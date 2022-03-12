@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import styles from './InputTest.module.css';
 
-function InputTest() {
-  const [value, setValue] = useState('Это - управляемый input!');
+const InputTest: React.FC = () => {
+  const [value, setValue] = useState<string>('Это - управляемый input!');
 
   return (
     <>
@@ -18,6 +18,6 @@ function InputTest() {
       />
     </>
   );
-}
+};
 
 export default InputTest;

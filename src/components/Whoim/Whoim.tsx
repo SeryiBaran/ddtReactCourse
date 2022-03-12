@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 
 const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
 
-function Whoim() {
-  const [whoimIsShown, setWhoimIsShown] = useState(false);
+const Whoim: React.FC = () => {
+  const [whoimIsShown, setWhoimIsShown] = useState<boolean>(false);
 
   function clickWhoimButton() {
     setWhoimIsShown(whoimIsShown => !whoimIsShown);
@@ -19,6 +19,6 @@ function Whoim() {
       {whoimIsShown && whoimText}
     </div>
   );
-}
+};
 
 export default Whoim;

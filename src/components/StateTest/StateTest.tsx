@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 // import styles from './StateTest.module.css';
 
-function StateTest() {
-  const [liveTime, setLiveTime] = useState(3);
-  const [timerID, setTimerID] = useState(0);
+const StateTest: React.FC = () => {
+  const [liveTime, setLiveTime] = useState<number>(3);
+  const [timerID, setTimerID] = useState<number>(0);
 
   function tick() {
     setLiveTime(liveTime => liveTime - 1);
@@ -28,6 +28,6 @@ function StateTest() {
       )}
     </div>
   );
-}
+};
 
 export default StateTest;

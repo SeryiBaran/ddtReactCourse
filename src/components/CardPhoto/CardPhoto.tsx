@@ -7,13 +7,13 @@ interface CardPhotoProps {
   photoDescription: string;
 }
 
-function CardPhoto(props: CardPhotoProps) {
+const CardPhoto = (props: CardPhotoProps) => {
   return (
     <div className={styles['card-photo']}>
       <img src={props.photoUrl} alt="Photo" />
       <p className={styles['card-description']}>{props.photoDescription}</p>
     </div>
   );
-}
+};
 
 export default CardPhoto;

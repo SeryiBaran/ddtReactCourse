@@ -2,8 +2,8 @@ import React from 'react';
 
 import styles from './Indent.module.css';
 
-function Indent() {
+const Indent: React.FC = () => {
   return <div className={styles['indent']}></div>;
-}
+};
 
 export default Indent;

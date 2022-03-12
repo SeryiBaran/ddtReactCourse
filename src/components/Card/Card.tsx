@@ -17,7 +17,7 @@ interface CardProps {
   size: number;
 }
 
-function Card(props: CardProps) {
+const Card: React.FC<CardProps> = props => {
   return (
     <div
       className={styles['card']}
@@ -39,5 +39,5 @@ function Card(props: CardProps) {
       </div>
     </div>
   );
-}
+};
 export default Card;

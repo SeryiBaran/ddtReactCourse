@@ -16,7 +16,7 @@ import InputTest from './InputTest/InputTest';
 
 const NAME = 'ddtReactCourse';
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <div id="app">
@@ -56,6 +56,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 // import styles from './EffectTest.module.css';
 
-function EffectTest() {
-  const [count, setCount] = useState(0);
+const EffectTest: React.FC = () => {
+  const [count, setCount] = useState<number>(0);
 
   let paragraphCountText = `Вы нажали на кнопочку ${count} раз`;
 
@@ -22,6 +22,6 @@ function EffectTest() {
       <p>{paragraphCountText}</p>
     </div>
   );
-}
+};
 
 export default EffectTest;

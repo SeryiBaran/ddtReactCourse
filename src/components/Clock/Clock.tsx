@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-function Clock() {
-  const [date, setDate] = useState(new Date());
+const Clock: React.FC = () => {
+  const [date, setDate] = useState<Date>(new Date());
   const [timerID, setTimerID] = useState(0);
 
   function tick() {
@@ -21,6 +21,6 @@ function Clock() {
   }, []);
 
   return <>{date.toLocaleTimeString()}</>;
-}
+};
 
 export default Clock;

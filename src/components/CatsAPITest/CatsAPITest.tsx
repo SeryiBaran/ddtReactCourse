@@ -3,11 +3,11 @@ import axios from 'axios';
 
 import styles from './CatsAPITest.module.css';
 
-function CatsAPITest() {
+const CatsAPITest: React.FC = () => {
   const [cat, setCat] = useState({
     url: '',
   });
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const fetchUrl = 'https://api.thecatapi.com/v1/images/search';
 
   async function fetchData() {
@@ -62,6 +62,6 @@ function CatsAPITest() {
       <img className={styles['cats-api-test-img']} src={cat.url} alt="Кот" />
     </div>
   );
-}
+};
 
 export default CatsAPITest;
