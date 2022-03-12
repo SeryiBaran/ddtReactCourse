@@ -34,17 +34,16 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   outline: none;
-  background-image: url('../../img/edit.svg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: rgb(216 225 255);
+  color: #1343aa;
   cursor: pointer;
   transition: all 150ms ease-in-out;
   transition-property: background-color, background-image;
 }
 
 .not-valid .card-mood-button {
-  background-image: url('../../img/alert-circle.svg');
   background-color: rgb(255 199 199);
+  color: #B80000;
   cursor: not-allowed;
 }
 
@@ -52,10 +51,13 @@
   opacity: 0.8;
 }
 
+.card-mood-button::before {
+  font-size: 1.4em;
+}
+
 .active-card-mood-button {
-  background-image: url('../../img/save.svg');
-  background-position: center;
-  background-color: rgb(161 245 164);
+  background-color: rgb(199 255 206);
+  color: #0C7A00;
 }
 
 .not-valid .card-mood-button:hover {

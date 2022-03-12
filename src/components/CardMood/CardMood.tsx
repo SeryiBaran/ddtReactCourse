@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import styles from './CardMood.module.css';
 
@@ -62,6 +63,9 @@ const CardMood: React.FC = () => {
         className={[
           styles['card-mood-button'],
           activeInput && styles['active-card-mood-button'],
+          activeInput && 'fa-solid fa-circle-check',
+          !activeInput && 'fa-solid fa-pencil',
+          !validInput && 'fa-solid fa-circle-exclamation',
         ]
           .filter(e => !!e)
           .join(' ')}

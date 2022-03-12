@@ -18,6 +18,7 @@
     "prod": "npm run csssort && npm run build && npm run cssprefix"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "axios": "^0.26.0",
     "chart.js": "^3.7.1",
     "react": "^17.0.2",

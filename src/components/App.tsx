@@ -37,11 +37,11 @@ const App: React.FC = () => {
         <StateTest />
         <Indent />
         <Card
-          name="ХЗ"
-          lastname="ХЗ"
-          birth="ХЗ"
-          gender="ХЗ"
-          diagnosis="Обижен на всех"
+          name="-"
+          lastname="-"
+          birth="-"
+          gender="-"
+          diagnosis="-"
           photo={photo}
           photoDescription="В спокойном состоянии ↑"
           size={1}
