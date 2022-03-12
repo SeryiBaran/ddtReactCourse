@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import styles from './EffectTest.module.css';
+// import styles from './EffectTest.module.css';
 
 function EffectTest() {
   const [count, setCount] = useState(0);

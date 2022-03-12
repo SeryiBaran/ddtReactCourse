@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import styles from './Whoim.module.css';
+// import styles from './Whoim.module.css';
 
 const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
 

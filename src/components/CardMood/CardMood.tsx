@@ -32,9 +32,9 @@ function CardMood() {
 
   function onKeyDownCardMoodInput(e: any) {
     if (e.target.value.length > cardMoodInputLimit) {
-      setValidInput(validInput => false);
+      setValidInput(false);
     } else {
-      setValidInput(validInput => true);
+      setValidInput(true);
     }
   }
 

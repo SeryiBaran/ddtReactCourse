@@ -11,12 +11,12 @@ function CatsAPITest() {
   const fetchUrl = 'https://api.thecatapi.com/v1/images/search';
 
   async function fetchData() {
-    setIsLoading(isLoading => true);
+    setIsLoading(true);
     axios
       .get(fetchUrl)
       .then(response =>
-        setCat(cat => {
-          setIsLoading(isLoading => false);
+        setCat(() => {
+          setIsLoading(false);
           return response.data[0];
         }),
       )

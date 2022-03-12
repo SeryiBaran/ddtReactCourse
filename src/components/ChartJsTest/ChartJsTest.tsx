@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import styles from './ChartJsTest.module.css';
+// import styles from './ChartJsTest.module.css';
 
 import PieCountries from '../PieCountries/PieCountries';
 

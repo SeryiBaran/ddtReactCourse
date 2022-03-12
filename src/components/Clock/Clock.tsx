@@ -5,7 +5,7 @@ function Clock() {
   const [timerID, setTimerID] = useState(0);
 
   function tick() {
-    setDate(date => new Date());
+    setDate(new Date());
   }
 
   useEffect(() => {

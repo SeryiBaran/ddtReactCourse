@@ -26,12 +26,12 @@ function PieCountries({ data }: any) {
   ];
 
   const chartJsDataLabels: Array<any> = [];
-  data.slice(0, 15).forEach((elem: any, index: number) => {
+  data.slice(0, 15).forEach((elem: any) => {
     chartJsDataLabels.push([elem.country]);
   });
 
   const chartJsDataCounts: Array<any> = [];
-  data.slice(0, 15).forEach((elem: any, index: number) => {
+  data.slice(0, 15).forEach((elem: any) => {
     chartJsDataCounts.push([elem.cases]);
   });
 

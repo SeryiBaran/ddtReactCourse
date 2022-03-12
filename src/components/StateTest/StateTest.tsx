@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import styles from './StateTest.module.css';
+// import styles from './StateTest.module.css';
 
 function StateTest() {
   const [liveTime, setLiveTime] = useState(3);
@@ -13,7 +13,7 @@ function StateTest() {
   useEffect(() => {
     let isMounted = true;
     if (isMounted) {
-      setTimerID(timerID => setInterval(() => tick(), 1000));
+      setTimerID(setInterval(() => tick(), 1000));
     }
     return () => {
       clearInterval(timerID);
