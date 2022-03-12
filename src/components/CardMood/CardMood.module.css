@@ -38,21 +38,28 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: all 150ms ease-in-out;
+  transition-property: background-color, background-image;
 }
 
 .not-valid .card-mood-button {
   background-image: url('../../img/alert-circle.svg');
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgb(255, 199, 199);
   cursor: not-allowed;
 }
 
-.card-mood-button:not(.not-valid .card-mood-button):hover {
-  background-color: rgba(211, 211, 211, 0.4);
+.card-mood-button:hover {
+  opacity: 0.8;
 }
 
 .active-card-mood-button {
   background-image: url('../../img/save.svg');
   background-position: center;
+  background-color: rgb(161, 245, 164);
+}
+
+.not-valid .card-mood-button:hover {
+  opacity: 1;
 }
 
 .card-mood::after {
