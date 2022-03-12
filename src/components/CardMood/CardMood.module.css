@@ -36,7 +36,6 @@
   outline: none;
   background-image: url('../../img/edit.svg');
   background-position: center;
-  background-size: 70% auto;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -54,7 +53,6 @@
 .active-card-mood-button {
   background-image: url('../../img/save.svg');
   background-position: center;
-  background-size: 70% auto;
 }
 
 .card-mood::after {
