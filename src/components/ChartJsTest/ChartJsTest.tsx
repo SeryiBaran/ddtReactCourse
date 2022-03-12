@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// import styles from './ChartJsTest.module.css';
-
 import PieCountries from '../PieCountries/PieCountries';
 
 const ChartJsTest: React.FC = () => {
@@ -25,7 +23,7 @@ const ChartJsTest: React.FC = () => {
   }, []);
 
   return (
-    <div id="chartJsTest">
+    <div>
       <h1>Статистика заражений Covid-19 по странам</h1>
       <PieCountries data={data} />
     </div>

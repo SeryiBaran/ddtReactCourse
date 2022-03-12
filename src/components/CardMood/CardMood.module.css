@@ -44,7 +44,7 @@
 
 .not-valid .card-mood-button {
   background-image: url('../../img/alert-circle.svg');
-  background-color: rgb(255, 199, 199);
+  background-color: rgb(255 199 199);
   cursor: not-allowed;
 }
 
@@ -55,7 +55,7 @@
 .active-card-mood-button {
   background-image: url('../../img/save.svg');
   background-position: center;
-  background-color: rgb(161, 245, 164);
+  background-color: rgb(161 245 164);
 }
 
 .not-valid .card-mood-button:hover {

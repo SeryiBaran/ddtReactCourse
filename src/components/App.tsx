@@ -13,6 +13,7 @@ import Indent from './Indent/Indent';
 import CatsAPITest from './CatsAPITest/CatsAPITest';
 import ChartJsTest from './ChartJsTest/ChartJsTest';
 import InputTest from './InputTest/InputTest';
+import Counter from './Counter/Counter';
 
 const NAME = 'ddtReactCourse';
 
@@ -52,6 +53,8 @@ const App: React.FC = () => {
         <ChartJsTest />
         <Indent />
         <InputTest />
+        <Indent />
+        <Counter />
         <Indent />
       </div>
     </>

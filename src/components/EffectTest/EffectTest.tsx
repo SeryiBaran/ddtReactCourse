@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// import styles from './EffectTest.module.css';
-
 const EffectTest: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
@@ -17,7 +15,7 @@ const EffectTest: React.FC = () => {
   });
 
   return (
-    <div id="effectTest">
+    <div>
       <button onClick={onButtonClick}>Нажми меня</button>
       <p>{paragraphCountText}</p>
     </div>

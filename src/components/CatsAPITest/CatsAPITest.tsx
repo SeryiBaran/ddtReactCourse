@@ -30,7 +30,7 @@ const CatsAPITest: React.FC = () => {
   }, []);
 
   return (
-    <div id="cats-api-test">
+    <div>
       <button
         className={styles['cats-api-test-fetch-button']}
         onClick={() => {

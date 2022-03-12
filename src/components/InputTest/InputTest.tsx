@@ -6,7 +6,7 @@ const InputTest: React.FC = () => {
   const [value, setValue] = useState<string>('Это - управляемый input!');
 
   return (
-    <>
+    <div>
       <h1>{value}</h1>
       <input
         type="text"
@@ -16,7 +16,7 @@ const InputTest: React.FC = () => {
           setValue(e.target.value);
         }}
       />
-    </>
+    </div>
   );
 };
 

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// import styles from './StateTest.module.css';
-
 const StateTest: React.FC = () => {
   const [liveTime, setLiveTime] = useState<number>(3);
   const [timerID, setTimerID] = useState<number>(0);
@@ -22,7 +20,7 @@ const StateTest: React.FC = () => {
   }, []);
 
   return (
-    <div id="stateTest">
+    <div>
       {!(liveTime < 1) && (
         <h2>Эта надпись исчезнет через {liveTime} секунд!</h2>
       )}
