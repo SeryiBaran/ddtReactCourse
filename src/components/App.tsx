@@ -15,8 +15,18 @@ import ChartJsTest from './ChartJsTest/ChartJsTest';
 import InputTest from './InputTest/InputTest';
 import Counter from './Counter/Counter';
 import Button from './Button/Button';
+import TableTest from './TableTest/TableTest';
 
 const NAME = 'ddtReactCourse';
+
+const data = {
+  thead: [1, 2, 3, 4, 5],
+  tbody: [
+    [11, 22, 33, 44, 55],
+    [11, 22, 33, 44, 55],
+    [11, 22, 33, 44, 55],
+  ],
+};
 
 const App: React.FC = () => {
   return (
@@ -57,6 +67,9 @@ const App: React.FC = () => {
       <Counter />
       <Indent />
       <Button>123</Button>
+      <Indent />
+      <TableTest data={data} />
+      <Indent />
     </div>
   );
 };
