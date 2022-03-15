@@ -37,7 +37,6 @@ const CatsAPITest: React.FC = () => {
         onClick={() => {
           fetchData();
         }}
-        className="nana"
       >
         {isLoading ? (
           <div className={styles['loader']}></div>
