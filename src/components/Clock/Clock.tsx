@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Clock: React.FC = () => {
   const [date, setDate] = useState<Date>(new Date());
-  const [timerID, setTimerID] = useState<number>(0);
+  let timerID: number;
 
   function tick() {
     setDate(new Date());
@@ -11,8 +11,9 @@ const Clock: React.FC = () => {
   useEffect(() => {
     let isMounted = true;
     if (isMounted) {
-      setTimerID(setInterval(() => tick(), 1000));
+      timerID = window.setInterval(tick, 1000);
     }
+
     return () => {
       clearInterval(timerID);
       isMounted = false;
