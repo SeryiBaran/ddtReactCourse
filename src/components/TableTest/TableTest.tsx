@@ -1,5 +1,4 @@
 import React from 'react';
-import * as Bootstrap from 'react-bootstrap';
 
 interface TableTestProps {
   data?: any;
@@ -20,12 +19,12 @@ const TableTest: React.FC<TableTestProps> = props => {
     );
   });
   return (
-    <Bootstrap.Table striped bordered hover>
+    <table>
       <thead>
         <tr>{theadContent}</tr>
       </thead>
       <tbody>{tbodyContent}</tbody>
-    </Bootstrap.Table>
+    </table>
   );
 };
 
