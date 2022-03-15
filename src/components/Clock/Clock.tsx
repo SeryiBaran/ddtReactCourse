@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Clock: React.FC = () => {
   const [date, setDate] = useState<Date>(new Date());
-  let timerID: number;
+  const timerRef = useRef<number>();
 
   function tick() {
     setDate(new Date());
@@ -11,11 +11,11 @@ const Clock: React.FC = () => {
   useEffect(() => {
     let isMounted = true;
     if (isMounted) {
-      timerID = setInterval(tick, 1000);
+      timerRef.current = setInterval(tick, 1000);
     }
 
     return () => {
-      clearInterval(timerID);
+      clearInterval(timerRef.current);
       isMounted = false;
     };
   }, []);
