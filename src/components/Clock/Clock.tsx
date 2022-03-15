@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Clock: React.FC = () => {
   const [date, setDate] = useState<Date>(new Date());
-  const [timerID, setTimerID] = useState<number>();
+  const [timerID, setTimerID] = useState<ReturnType<typeof setInterval>>();
 
   function tick() {
     setDate(new Date());
