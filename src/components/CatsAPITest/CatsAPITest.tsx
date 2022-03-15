@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Button from '../Button/Button';
+
 import styles from './CatsAPITest.module.css';
 
 const CatsAPITest: React.FC = () => {
@@ -31,11 +33,11 @@ const CatsAPITest: React.FC = () => {
 
   return (
     <div>
-      <button
-        className={styles['cats-api-test-fetch-button']}
+      <Button
         onClick={() => {
           fetchData();
         }}
+        className="nana"
       >
         {isLoading ? (
           <div className={styles['loader']}></div>
@@ -58,7 +60,7 @@ const CatsAPITest: React.FC = () => {
           </svg>
         )}
         {isLoading ? 'Загрузка...' : 'Другой кот'}
-      </button>
+      </Button>
       <img className={styles['cats-api-test-img']} src={cat.url} alt="Кот" />
     </div>
   );

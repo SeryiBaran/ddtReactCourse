@@ -14,6 +14,7 @@ import CatsAPITest from './CatsAPITest/CatsAPITest';
 import ChartJsTest from './ChartJsTest/ChartJsTest';
 import InputTest from './InputTest/InputTest';
 import Counter from './Counter/Counter';
+import Button from './Button/Button';
 
 const NAME = 'ddtReactCourse';
 
@@ -21,12 +22,12 @@ const App: React.FC = () => {
   return (
     <>
       <div id="app">
-        <header className={styles.header}>
+        <header className={styles['header']}>
           <h1>Здравствуй, {NAME}!</h1>
           <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
         </header>
         <Indent />
-        <h2 className={styles.clock}>
+        <h2 className={styles['clock']}>
           Время: <Clock />
         </h2>
         <Indent />
@@ -56,6 +57,7 @@ const App: React.FC = () => {
         <Indent />
         <Counter />
         <Indent />
+        <Button>123</Button>
       </div>
     </>
   );
