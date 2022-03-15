@@ -20,46 +20,44 @@ const NAME = 'ddtReactCourse';
 
 const App: React.FC = () => {
   return (
-    <>
-      <div id="app">
-        <header className={styles['header']}>
-          <h1>Здравствуй, {NAME}!</h1>
-          <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
-        </header>
-        <Indent />
-        <h2 className={styles['clock']}>
-          Время: <Clock />
-        </h2>
-        <Indent />
-        <Whoim />
-        <Indent />
-        <EffectTest />
-        <Indent />
-        <StateTest />
-        <Indent />
-        <Card
-          name="-"
-          lastname="-"
-          birth="-"
-          gender="-"
-          diagnosis="-"
-          photo={photo}
-          photoDescription="В спокойном состоянии ↑"
-          size={1}
-        />
-        <Timer />
-        <Indent />
-        <CatsAPITest />
-        <Indent />
-        <ChartJsTest />
-        <Indent />
-        <InputTest />
-        <Indent />
-        <Counter />
-        <Indent />
-        <Button>123</Button>
-      </div>
-    </>
+    <div id="app">
+      <header className={styles['header']}>
+        <h1>Здравствуй, {NAME}!</h1>
+        <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
+      </header>
+      <Indent />
+      <h2 className={styles['clock']}>
+        Время: <Clock />
+      </h2>
+      <Indent />
+      <Whoim />
+      <Indent />
+      <EffectTest />
+      <Indent />
+      <StateTest />
+      <Indent />
+      <Card
+        name="-"
+        lastname="-"
+        birth="-"
+        gender="-"
+        diagnosis="-"
+        photo={photo}
+        photoDescription="В спокойном состоянии ↑"
+        size={1}
+      />
+      <Timer />
+      <Indent />
+      <CatsAPITest />
+      <Indent />
+      <ChartJsTest />
+      <Indent />
+      <InputTest />
+      <Indent />
+      <Counter />
+      <Indent />
+      <Button>123</Button>
+    </div>
   );
 };
 
