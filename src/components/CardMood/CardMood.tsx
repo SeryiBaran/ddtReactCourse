@@ -1,6 +1,10 @@
 import React, { useState, useRef } from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
+
+library.add(fas);
 
 const cardMoodInputLimit = 30;
 
@@ -63,11 +67,11 @@ const Button = styled.button`
   color: #1343aa;
   cursor: pointer;
   transition: all 150ms ease-in-out;
-  transition-property: background-color, background-image;
+  transition-property: background-color;
   :hover {
     opacity: 0.8;
   }
-  ::before {
+  svg {
     font-size: 1.4em;
   }
   ${({ active }: any) =>
@@ -137,18 +141,15 @@ const CardMood: React.FC = () => {
         ref={cardMoodInput}
       />
       <Button
-        className={[
-          activeInput && 'fa-solid fa-circle-check',
-          !activeInput && 'fa-solid fa-pencil',
-          !validInput && 'fa-solid fa-circle-exclamation',
-        ]
-          .filter(e => !!e)
-          .join(' ')}
         {...(activeInput ? { title: 'Применить' } : { title: 'Редактировать' })}
         onClick={toogleAndApplyCardMood}
         {...(validInput && { valid: true })}
         {...(activeInput && { active: true })}
-      />
+      >
+        {!activeInput && <FontAwesomeIcon icon="pencil" />}
+        {activeInput && validInput && <FontAwesomeIcon icon="circle-check" />}
+        {!validInput && <FontAwesomeIcon icon="circle-exclamation" />}
+      </Button>
     </CardMoodDiv>
   );
 };
