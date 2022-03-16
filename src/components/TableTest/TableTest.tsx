@@ -1,11 +1,11 @@
 import React from 'react';
 
 interface TableTestProps {
-  data?: any;
+  data: any;
 }
 
-const TableTest: React.FC<TableTestProps> = props => {
-  const { thead, tbody } = props.data;
+const TableTest: React.FC<TableTestProps> = ({ data }) => {
+  const { thead, tbody } = data;
   const theadContent = thead.map((elem: any, i: number) => {
     return <th key={i}>{elem}</th>;
   });

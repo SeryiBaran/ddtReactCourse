@@ -1,9 +1,9 @@
-import React from 'react';
+import styled from 'styled-components';
 
-import styles from './Indent.module.css';
-
-const Indent: React.FC = () => {
-  return <div className={styles['indent']}></div>;
-};
+const Indent = styled.div`
+  width: 100%;
+  margin: 15px 0;
+  border-bottom: solid #333 2px;
+`;
 
 export default Indent;

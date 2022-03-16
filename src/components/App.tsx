@@ -16,6 +16,7 @@ import InputTest from './InputTest/InputTest';
 import Counter from './Counter/Counter';
 import Button from './Button/Button';
 import TableTest from './TableTest/TableTest';
+import ClassTest from './ClassTest/ClassTest';
 
 const NAME = 'ddtReactCourse';
 
@@ -69,6 +70,8 @@ const App: React.FC = () => {
       <Button>123</Button>
       <Indent />
       <TableTest data={data} />
+      <Indent />
+      <ClassTest />
       <Indent />
     </div>
   );

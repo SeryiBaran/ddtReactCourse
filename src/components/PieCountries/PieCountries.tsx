@@ -5,7 +5,7 @@ import { Pie } from 'react-chartjs-2';
 import styles from './PieCountries.module.css';
 
 interface PieCountriesProps {
-  data: any;
+  data: object[];
 }
 
 ChartJS.register(ArcElement, Tooltip, Legend);
