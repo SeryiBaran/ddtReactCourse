@@ -1,12 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
-
-import styles from './PieCountries.module.css';
 
 interface PieCountriesProps {
   data: object[];
 }
+
+const PieContainer = styled.div`
+  max-width: 50rem;
+  max-height: 50rem;
+`;
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -57,7 +61,11 @@ const PieCountries: React.FC<PieCountriesProps> = ({ data }) => {
     ],
   };
 
-  return <Pie data={chartJsData} className={styles['pie']} />;
+  return (
+    <PieContainer>
+      <Pie data={chartJsData} />
+    </PieContainer>
+  );
 };
 
 export default PieCountries;

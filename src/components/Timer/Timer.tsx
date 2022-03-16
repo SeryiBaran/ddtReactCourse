@@ -1,14 +1,18 @@
 import React from 'react';
-
-import styles from './Timer.module.css';
+import styled from 'styled-components';
 
 import Clock from '../Clock/Clock';
 
+const TimerH1 = styled.h1`
+  font-size: 1.3em;
+  text-align: center;
+`;
+
 const Timer: React.FC = () => {
   return (
-    <h1 className={styles.timer}>
+    <TimerH1>
       Время в палате: <Clock />
-    </h1>
+    </TimerH1>
   );
 };
 

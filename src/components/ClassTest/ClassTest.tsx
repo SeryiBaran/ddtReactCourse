@@ -1,10 +1,14 @@
 import React from 'react';
-
-import styles from './ClassTest.module.css';
+import styled from 'styled-components';
 
 interface ClassTestState {
   value: string;
 }
+
+const Input = styled.input`
+  padding: 1rem;
+  border: 1px solid #000;
+`;
 
 class ClassTest extends React.Component<any, ClassTestState> {
   constructor(props: any) {
@@ -19,9 +23,8 @@ class ClassTest extends React.Component<any, ClassTestState> {
     return (
       <div>
         <h1>{this.state.value}</h1>
-        <input
+        <Input
           type="text"
-          className={styles['input']}
           defaultValue={this.state.value}
           onChange={e => {
             this.setState({

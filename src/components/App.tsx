@@ -1,7 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import photo from '../img/ezh.jpg';
-import styles from './App.module.css';
 
 import Clock from './Clock/Clock';
 import Whoim from './Whoim/Whoim';
@@ -29,17 +29,26 @@ const data = {
   ],
 };
 
+const Header = styled.header`
+  font-size: 18px;
+  text-align: center;
+`;
+
+const ClockH2 = styled.h2`
+  text-align: center;
+`;
+
 const App: React.FC = () => {
   return (
     <div id="app">
-      <header className={styles['header']}>
+      <Header>
         <h1>Здравствуй, {NAME}!</h1>
         <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
-      </header>
+      </Header>
       <Indent />
-      <h2 className={styles['clock']}>
+      <ClockH2>
         Время: <Clock />
-      </h2>
+      </ClockH2>
       <Indent />
       <Whoim />
       <Indent />
@@ -48,13 +57,13 @@ const App: React.FC = () => {
       <StateTest />
       <Indent />
       <Card
-        name="-"
-        lastname="-"
-        birth="-"
-        gender="-"
-        diagnosis="-"
+        name="Ёж"
+        lastname="Ёжиков"
+        birth="2022"
+        gender="¯\_(ツ)_/¯"
+        diagnosis="Бурчит"
         photo={photo}
-        photoDescription="В спокойном состоянии ↑"
+        photoDescription="В спокойном состоянии"
         size={1}
       />
       <Timer />

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import styles from './Counter.module.css';
+const Button = styled.button`
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 1rem;
+`;
 
 const Counter = () => {
   const [value, setValue] = useState(0);
@@ -8,22 +13,20 @@ const Counter = () => {
   return (
     <div className="Counter">
       <h1>{value}</h1>
-      <button
-        className={styles['button']}
+      <Button
         onClick={() => {
           setValue(value => value - 1);
         }}
       >
         -
-      </button>
-      <button
-        className={styles['button']}
+      </Button>
+      <Button
         onClick={() => {
           setValue(value => value + 1);
         }}
       >
         +
-      </button>
+      </Button>
     </div>
   );
 };

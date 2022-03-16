@@ -1,9 +1,37 @@
 import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 import axios from 'axios';
 
 import Button from '../Button/Button';
 
-import styles from './CatsAPITest.module.css';
+const spin = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+const Loader = styled.div`
+  min-width: 3rem;
+  min-height: 3rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border: 0.2rem solid #f3f3f3;
+  border-top: 0.2rem solid #3498db;
+  border-radius: 50%;
+  background-color: #4c6ef5;
+  animation: ${spin} 2s linear infinite;
+`;
+
+const Img = styled.img`
+  width: 30rem;
+  height: 20rem;
+  object-fit: contain;
+  background-color: #91a7ff;
+`;
 
 const CatsAPITest: React.FC = () => {
   const [cat, setCat] = useState({
@@ -37,9 +65,10 @@ const CatsAPITest: React.FC = () => {
         onClick={() => {
           fetchData();
         }}
+        styles={':hover .loader {background-color: #3b5bdb;}'}
       >
         {isLoading ? (
-          <div className={styles['loader']}></div>
+          <Loader className="loader" />
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +89,7 @@ const CatsAPITest: React.FC = () => {
         )}
         {isLoading ? 'Загрузка...' : 'Другой кот'}
       </Button>
-      <img className={styles['cats-api-test-img']} src={cat.url} alt="Кот" />
+      <Img src={cat.url} alt="Кот" />
     </div>
   );
 };

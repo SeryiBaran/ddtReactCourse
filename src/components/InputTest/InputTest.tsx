@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import styles from './InputTest.module.css';
+const Input = styled.input`
+  padding: 1rem;
+  border: 1px solid #000;
+`;
 
 const InputTest: React.FC = () => {
   const [value, setValue] = useState<string>('Это - управляемый input!');
@@ -8,9 +12,8 @@ const InputTest: React.FC = () => {
   return (
     <div>
       <h1>{value}</h1>
-      <input
+      <Input
         type="text"
-        className={styles['input']}
         defaultValue={value}
         onChange={e => {
           setValue(e.target.value);
