@@ -53,7 +53,7 @@ const App: React.FC = () => {
             </a>
           </TextLogo>
           <HeaderLinks>
-            <Link to="/">App.tsx</Link>
+            <Link to="/">Index.tsx</Link>
             <Link to="second">Second.tsx</Link>
           </HeaderLinks>
         </Header>
