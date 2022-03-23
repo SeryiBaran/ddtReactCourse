@@ -56,7 +56,11 @@ const CatsAPITest: React.FC = () => {
   }
 
   useEffect(() => {
-    fetchData();
+    let isMounted = true;
+    if (isMounted) fetchData();
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
