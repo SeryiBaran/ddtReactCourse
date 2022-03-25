@@ -5,17 +5,18 @@ import {
   Outlet,
   Router,
   Link,
-  createHashHistory,
+  // createHashHistory,
 } from '@tanstack/react-location';
 
 import Header from './Header/Header';
 import Index from './Index';
 import Second from './Second';
 
-const hashHistory = createHashHistory();
-const reactLocation = new ReactLocation({
-  history: hashHistory,
-});
+// const hashHistory = createHashHistory();
+// const reactLocation = new ReactLocation({
+//   history: hashHistory,
+// });
+const reactLocation = new ReactLocation();
 
 const routes = [
   {
