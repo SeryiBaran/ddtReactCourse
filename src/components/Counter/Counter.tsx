@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { useCounter } from '../../hooks/useCounter';
+
 const Button = styled.button`
   width: 3.2rem;
   height: 3.2rem;
@@ -8,25 +10,13 @@ const Button = styled.button`
 `;
 
 const Counter = () => {
-  const [value, setValue] = useState(0);
+  const { counter, increment, decrement } = useCounter(0);
 
   return (
     <div className="Counter">
-      <h1>{value}</h1>
-      <Button
-        onClick={() => {
-          setValue(value => value - 1);
-        }}
-      >
-        -
-      </Button>
-      <Button
-        onClick={() => {
-          setValue(value => value + 1);
-        }}
-      >
-        +
-      </Button>
+      <h1>{counter}</h1>
+      <Button onClick={decrement}>-</Button>
+      <Button onClick={increment}>+</Button>
     </div>
   );
 };

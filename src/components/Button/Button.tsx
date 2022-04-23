@@ -7,6 +7,7 @@ interface MyButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   id?: string;
+  children: React.ReactNode;
 }
 
 const ButtonStyled = styled.button`
