@@ -10,7 +10,6 @@
 3. Run command for start dev server:  
 `npm run dev`  
 
-
 ## How to build  
 
 1. Make sure that the node.js are installed and working;  

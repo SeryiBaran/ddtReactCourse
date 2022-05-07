@@ -6,10 +6,7 @@ interface ReturnTypes {
   decrement: () => void;
 }
 
-export const useCounter = (
-  initialValue: number = 0,
-  step: number = 1,
-): ReturnTypes => {
+export const useCounter = (initialValue = 0, step = 1): ReturnTypes => {
   const [counter, setCounter] = useState<number>(initialValue);
   const increment = () => {
     setCounter((counter: number) => counter + step);

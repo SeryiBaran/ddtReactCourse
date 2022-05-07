@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  ReactLocation,
-  Outlet,
-  Router,
-  Link,
-} from '@tanstack/react-location';
+import { ReactLocation, Outlet, Router, Link } from '@tanstack/react-location';
 
 import Header from './Header/Header';
 import Index from './Index';
