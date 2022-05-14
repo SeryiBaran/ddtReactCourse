@@ -14,7 +14,7 @@
     "brs": "browser-sync start --server \"dist\" --files \"**/*\"",
     "format": "prettier --write ./src/**/*",
     "csssort": "postcss ./src/**/*.css --replace --config package.json --no-map",
-    "cssprefix": "postcss ./dist/**/*.css --use autoprefixer --config package.json --no-map",
+    "cssprefix": "postcss ./dist/**/*.css --replace --use autoprefixer --config package.json --no-map",
     "prod": "npm run csssort && npm run build && npm run cssprefix"
   },
   "dependencies": {
