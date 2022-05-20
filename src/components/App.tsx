@@ -36,7 +36,7 @@ const HeaderLinks = styled.div`
 `;
 
 const TextLogo = styled.span`
-  font-size: 2em;
+  font-size: 1.6em;
 `;
 
 const App: React.FC = () => {
@@ -49,7 +49,7 @@ const App: React.FC = () => {
               href="https://github.com/SeryiBaran/ddtReactCourse"
               title="GitHub"
             >
-              SeryiBaran/ddtReactCourse
+              SB/ddtRC
             </a>
           </TextLogo>
           <HeaderLinks>
