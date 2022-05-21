@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Clock: React.FC = () => {
+export const Clock: React.FC = () => {
   const [date, setDate] = useState<Date>(new Date());
   let timerID: number;
 
@@ -22,5 +22,3 @@ const Clock: React.FC = () => {
 
   return <>{date.toLocaleTimeString()}</>;
 };
-
-export default Clock;

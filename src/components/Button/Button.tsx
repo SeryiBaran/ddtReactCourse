@@ -6,7 +6,6 @@ interface MyButtonProps {
   styles?: string;
   disabled?: boolean;
   onClick?: () => void;
-  id?: string;
   children: React.ReactNode;
 }
 
@@ -61,7 +60,7 @@ const ButtonStyled = styled.button`
   ${({ styles }: any) => styles}
 `;
 
-const Button: React.FC<MyButtonProps> = ({
+export const Button: React.FC<MyButtonProps> = ({
   defaultIcon,
   children,
   styles,
@@ -91,5 +90,3 @@ const Button: React.FC<MyButtonProps> = ({
     </ButtonStyled>
   );
 };
-
-export default Button;

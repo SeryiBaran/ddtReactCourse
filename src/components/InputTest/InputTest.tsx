@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Input = styled.input`
-  padding: 1rem;
-  border: 1px solid #000;
-`;
+import {Input} from '../Input/Input'
 
-const InputTest: React.FC = () => {
+export const InputTest: React.FC = () => {
   const [value, setValue] = useState<string>('Это - управляемый input!');
 
   return (
@@ -22,5 +19,3 @@ const InputTest: React.FC = () => {
     </div>
   );
 };
-
-export default InputTest;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const StateTest: React.FC = () => {
+export const StateTest: React.FC = () => {
   const [liveTime, setLiveTime] = useState<number>(3);
   let timerID: number;
 
@@ -28,5 +28,3 @@ const StateTest: React.FC = () => {
     </div>
   );
 };
-
-export default StateTest;

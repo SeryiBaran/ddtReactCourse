@@ -17,7 +17,7 @@ const CardElemDiv = styled.div`
   }
 `;
 
-const CardElem: React.FC<CardElemProps> = props => {
+export const CardElem: React.FC<CardElemProps> = props => {
   return (
     <CardElemDiv>
       <p>
@@ -26,5 +26,3 @@ const CardElem: React.FC<CardElemProps> = props => {
     </CardElemDiv>
   );
 };
-
-export default CardElem;

@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {Input} from '../Input/Input'
+
 interface ClassTestState {
   value: string;
 }
 
-const Input = styled.input`
-  padding: 1rem;
-  border: 1px solid #000;
-`;
-
-class ClassTest extends React.Component<any, ClassTestState> {
+export class ClassTest extends React.Component<any, ClassTestState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -36,5 +33,3 @@ class ClassTest extends React.Component<any, ClassTestState> {
     );
   }
 }
-
-export default ClassTest;

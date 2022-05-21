@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import PieCountries from '../PieCountries/PieCountries';
+import {PieCountries} from '../PieCountries/PieCountries';
 
-const ChartJsTest: React.FC = () => {
+export const ChartJsTest: React.FC = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -29,5 +29,3 @@ const ChartJsTest: React.FC = () => {
     </div>
   );
 };
-
-export default ChartJsTest;

@@ -3,20 +3,20 @@ import styled from 'styled-components';
 
 import photo from '../img/ezh.jpg';
 
-import Clock from './Clock/Clock';
-import Whoim from './Whoim/Whoim';
-import EffectTest from './EffectTest/EffectTest';
-import StateTest from './StateTest/StateTest';
-import Card from './Card/Card';
-import Timer from './Timer/Timer';
-import Indent from './Indent/Indent';
-import CatsAPITest from './CatsAPITest/CatsAPITest';
-import ChartJsTest from './ChartJsTest/ChartJsTest';
-import InputTest from './InputTest/InputTest';
-import Counter from './Counter/Counter';
-import Button from './Button/Button';
-import TableTest from './TableTest/TableTest';
-import ClassTest from './ClassTest/ClassTest';
+import { Clock } from './Clock/Clock';
+import { Whoim } from './Whoim/Whoim';
+import { EffectTest } from './EffectTest/EffectTest';
+import { StateTest } from './StateTest/StateTest';
+import { Card } from './Card/Card';
+import { Timer } from './Timer/Timer';
+import { Indent } from './Indent/Indent';
+import { CatsAPITest } from './CatsAPITest/CatsAPITest';
+import { ChartJsTest } from './ChartJsTest/ChartJsTest';
+import { InputTest } from './InputTest/InputTest';
+import { Counter } from './Counter/Counter';
+import { Button } from './Button/Button';
+import { TableTest } from './TableTest/TableTest';
+import { ClassTest } from './ClassTest/ClassTest';
 
 const NAME = 'ddtReactCourse';
 
@@ -46,7 +46,7 @@ const StyledIndex = styled.div`
   padding: 0.8rem;
 `;
 
-const Index: React.FC = () => {
+export const Index: React.FC = () => {
   return (
     <StyledIndex id="index">
       <Head>
@@ -93,5 +93,3 @@ const Index: React.FC = () => {
     </StyledIndex>
   );
 };
-
-export default Index;

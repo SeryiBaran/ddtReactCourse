@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
 
-const Whoim: React.FC = () => {
+export const Whoim: React.FC = () => {
   const [whoimIsShown, setWhoimIsShown] = useState<boolean>(false);
 
   function clickWhoimButton() {
@@ -18,5 +18,3 @@ const Whoim: React.FC = () => {
     </div>
   );
 };
-
-export default Whoim;

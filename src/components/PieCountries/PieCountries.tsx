@@ -14,7 +14,7 @@ const PieContainer = styled.div`
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieCountries: React.FC<PieCountriesProps> = ({ data }) => {
+export const PieCountries: React.FC<PieCountriesProps> = ({ data }) => {
   const chartJsDataBGColors = [
     '#D180139E',
     '#6EAC3B9E',
@@ -67,5 +67,3 @@ const PieCountries: React.FC<PieCountriesProps> = ({ data }) => {
     </PieContainer>
   );
 };
-
-export default PieCountries;

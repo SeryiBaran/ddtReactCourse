@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import CardElem from '../CardElem/CardElem';
-import CardPhoto from '../CardPhoto/CardPhoto';
-import CardMood from '../CardMood/CardMood';
+import {CardElem} from '../CardElem/CardElem';
+import {CardPhoto} from '../CardPhoto/CardPhoto';
+import {CardMood} from '../CardMood/CardMood';
 
 interface CardProps {
   name: string;
@@ -38,7 +38,7 @@ const CardRows = styled.div`
   flex: 1 1 auto;
 `;
 
-const Card: React.FC<CardProps> = props => {
+export const Card: React.FC<CardProps> = props => {
   return (
     <CardDiv style={{ fontSize: props.size.toString() + 'rem' }}>
       <CardContent>
@@ -58,4 +58,3 @@ const Card: React.FC<CardProps> = props => {
     </CardDiv>
   );
 };
-export default Card;

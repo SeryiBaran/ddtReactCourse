@@ -9,7 +9,7 @@ const Button = styled.button`
   margin: 1rem;
 `;
 
-const Counter = () => {
+export const Counter = () => {
   const { counter, increment, decrement } = useCounter(0);
 
   return (
@@ -20,5 +20,3 @@ const Counter = () => {
     </div>
   );
 };
-
-export default Counter;

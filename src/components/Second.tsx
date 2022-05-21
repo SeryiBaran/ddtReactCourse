@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Second: React.FC = () => {
+export const Second: React.FC = () => {
   return (
     <div>
       Это страница Second!
@@ -8,5 +8,3 @@ const Second: React.FC = () => {
     </div>
   );
 };
-
-export default Second;

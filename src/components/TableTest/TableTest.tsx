@@ -4,7 +4,7 @@ interface TableTestProps {
   data: any;
 }
 
-const TableTest: React.FC<TableTestProps> = ({ data }) => {
+export const TableTest: React.FC<TableTestProps> = ({ data }) => {
   const { thead, tbody } = data;
   const theadContent = thead.map((elem: any, i: number) => {
     return <th key={i}>{elem}</th>;
@@ -27,5 +27,3 @@ const TableTest: React.FC<TableTestProps> = ({ data }) => {
     </table>
   );
 };
-
-export default TableTest;

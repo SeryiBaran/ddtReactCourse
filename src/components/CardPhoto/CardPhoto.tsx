@@ -30,7 +30,7 @@ const DescriptionContent = styled.span`
   margin-left: 0.3em;
 `;
 
-const CardPhoto = (props: CardPhotoProps) => {
+export const CardPhoto = (props: CardPhotoProps) => {
   return (
     <CardPhotoContainer>
       <img src={props.photoUrl} alt="Photo" />
@@ -41,5 +41,3 @@ const CardPhoto = (props: CardPhotoProps) => {
     </CardPhotoContainer>
   );
 };
-
-export default CardPhoto;

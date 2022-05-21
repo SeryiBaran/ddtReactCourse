@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import styled, { css } from 'styled-components';
 
 const cardMoodInputLimit = 30;
@@ -88,7 +87,7 @@ const Button = styled.button`
     `}
 `;
 
-const CardMood: React.FC = () => {
+export const CardMood: React.FC = () => {
   const [activeInput, setActiveInput] = useState<boolean>(false);
   const [validInput, setValidInput] = useState<boolean>(true);
   const [mood, setMood] = useState<string>('Напыжился');
@@ -152,5 +151,3 @@ const CardMood: React.FC = () => {
     </CardMoodDiv>
   );
 };
-
-export default CardMood;
