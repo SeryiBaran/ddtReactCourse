@@ -6,18 +6,19 @@ import { Button } from '../Button/Button';
 import { Loader } from '../Loader/Loader';
 
 const Img = styled.img`
-  width: 30rem;
+  max-width: 30rem;
+  width: 100%;
   height: 20rem;
   object-fit: contain;
   background-color: #91a7ff;
 `;
 
-interface Lala {
+interface CatType {
   url: string;
 }
 
 export const CatsAPITest: React.FC = () => {
-  const [cat, setCat] = useState<Lala>({
+  const [cat, setCat] = useState<CatType>({
     url: '',
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);

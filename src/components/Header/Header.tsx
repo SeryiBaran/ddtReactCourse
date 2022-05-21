@@ -11,11 +11,11 @@ export const Header = styled.header`
   z-index: 9999;
   flex-wrap: wrap;
   gap: 1em;
-  @media (min-width: 800px) {
+  @media (min-width: 841px) {
     position: sticky;
     top: 0;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 840px) {
     flex-direction: column;
   }
 `;
