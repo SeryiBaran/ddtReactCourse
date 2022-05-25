@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactLocation, Outlet, Router } from '@tanstack/react-location';
+import { RecoilRoot } from 'recoil';
 
 import '../standard.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -30,22 +31,24 @@ const TextLogo = styled.a`
 export const App: React.FC = () => {
   return (
     <div id="app">
-      <GlobalStyle />
-      <Router location={reactLocation} routes={routes}>
-        <Header>
-          <TextLogo
-            href="https://github.com/SeryiBaran/ddtReactCourse"
-            title="GitHub"
-          >
-            SB/ddtRC
-          </TextLogo>
-          <HeaderLinks>
-            <HeaderLink to="/">Index.tsx</HeaderLink>
-            <HeaderLink to="second">Second.tsx</HeaderLink>
-          </HeaderLinks>
-        </Header>
-        <Outlet />
-      </Router>
+      <RecoilRoot>
+        <GlobalStyle />
+        <Router location={reactLocation} routes={routes}>
+          <Header>
+            <TextLogo
+              href="https://github.com/SeryiBaran/ddtReactCourse"
+              title="GitHub"
+            >
+              SB/ddtRC
+            </TextLogo>
+            <HeaderLinks>
+              <HeaderLink to="/">Index.tsx</HeaderLink>
+              <HeaderLink to="second">Second.tsx</HeaderLink>
+            </HeaderLinks>
+          </Header>
+          <Outlet />
+        </Router>
+      </RecoilRoot>
     </div>
   );
 };

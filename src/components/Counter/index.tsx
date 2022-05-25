@@ -1,13 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useCounter } from '../../hooks/useCounter';
+import { MiniButton } from '../MiniButton';
 
-const Button = styled.button`
-  width: 3.2rem;
-  height: 3.2rem;
-  margin: 1rem;
-`;
+import { useCounter } from '../../hooks/useCounter';
 
 export const Counter = () => {
   const { counter, increment, decrement } = useCounter(0);
@@ -15,8 +11,8 @@ export const Counter = () => {
   return (
     <div className="Counter">
       <h1>{counter}</h1>
-      <Button onClick={decrement}>-</Button>
-      <Button onClick={increment}>+</Button>
+      <MiniButton onClick={decrement}>-</MiniButton>
+      <MiniButton onClick={increment}>+</MiniButton>
     </div>
   );
 };

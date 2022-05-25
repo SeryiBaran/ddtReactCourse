@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useRecoilState } from 'recoil';
 
 import photo from '../img/ezh.jpg';
 
@@ -18,6 +19,9 @@ import { Button } from './Button';
 import { TableTest } from './TableTest';
 import { ClassTest } from './ClassTest';
 import { UserCards } from './UserCards';
+import { RecoilTest } from './RecoilTest';
+
+import { globalState } from '../state/globalState';
 
 const NAME: string = 'ddtReactCourse';
 
@@ -92,6 +96,8 @@ export const Index: React.FC = () => {
       <Indent />
       <UserCards />
       <Indent />
+      <RecoilTest />
+      <RecoilTest />
     </StyledIndex>
   );
 };
