@@ -17,6 +17,7 @@ import { Counter } from './Counter/Counter';
 import { Button } from './Button/Button';
 import { TableTest } from './TableTest/TableTest';
 import { ClassTest } from './ClassTest/ClassTest';
+import { UserCards } from './UserCards/UserCards';
 
 const NAME = 'ddtReactCourse';
 
@@ -89,6 +90,8 @@ export const Index: React.FC = () => {
       <TableTest data={data} />
       <Indent />
       <ClassTest />
+      <Indent />
+      <UserCards />
       <Indent />
     </StyledIndex>
   );
