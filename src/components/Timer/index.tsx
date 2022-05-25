@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {Clock} from '../Clock/Clock';
+import { Clock } from '../Clock';
 
-const TimerH1 = styled.h1`
+const StyledTimer = styled.h1`
   font-size: 1.3em;
   text-align: center;
 `;
 
 export const Timer: React.FC = () => {
   return (
-    <TimerH1>
+    <StyledTimer>
       Время в палате: <Clock />
-    </TimerH1>
+    </StyledTimer>
   );
 };

@@ -1,5 +1,6 @@
-import { spin } from '../../styles/animations';
 import styled from 'styled-components';
+
+import { spin } from '../../styles/animations';
 
 export const Loader = styled.div`
   min-width: 3rem;

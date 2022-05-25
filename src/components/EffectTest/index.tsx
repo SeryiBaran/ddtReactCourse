@@ -5,7 +5,7 @@ export const EffectTest: React.FC = () => {
 
   let paragraphCountText = `Вы нажали на кнопочку ${count} раз`;
 
-  const onButtonClick = () => {
+  const handleButtonClick = () => {
     setCount(count => count + 1);
   };
 
@@ -15,9 +15,9 @@ export const EffectTest: React.FC = () => {
   });
 
   return (
-    <div>
-      <button onClick={onButtonClick}>Нажми меня</button>
+    <>
+      <button onClick={handleButtonClick}>Нажми меня</button>
       <p>{paragraphCountText}</p>
-    </div>
+    </>
   );
 };

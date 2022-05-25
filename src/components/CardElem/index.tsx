@@ -6,7 +6,7 @@ interface CardElemProps {
   elemContent: any;
 }
 
-const CardElemDiv = styled.div`
+const StyledCardElem = styled.div`
   margin-bottom: 0.3em;
   padding: 0.5em;
   border: solid 0.1em #cdcdcd;
@@ -19,10 +19,10 @@ const CardElemDiv = styled.div`
 
 export const CardElem: React.FC<CardElemProps> = props => {
   return (
-    <CardElemDiv>
+    <StyledCardElem>
       <p>
         <span>{props.elem}:</span> {props.elemContent}
       </p>
-    </CardElemDiv>
+    </StyledCardElem>
   );
 };

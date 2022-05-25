@@ -6,7 +6,7 @@ import '../standard.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import { GlobalStyle } from '../styles/global';
-import { Header, HeaderLinks, HeaderLink } from './Header/Header';
+import { Header, HeaderLinks, HeaderLink } from './Header';
 import { Index } from './Index';
 import { Second } from './Second';
 
@@ -23,7 +23,7 @@ const routes = [
   },
 ];
 
-const TextLogo = styled.span`
+const TextLogo = styled.a`
   font-size: 1.6em;
 `;
 
@@ -33,13 +33,11 @@ export const App: React.FC = () => {
       <GlobalStyle />
       <Router location={reactLocation} routes={routes}>
         <Header>
-          <TextLogo>
-            <a
-              href="https://github.com/SeryiBaran/ddtReactCourse"
-              title="GitHub"
-            >
-              SB/ddtRC
-            </a>
+          <TextLogo
+            href="https://github.com/SeryiBaran/ddtReactCourse"
+            title="GitHub"
+          >
+            SB/ddtRC
           </TextLogo>
           <HeaderLinks>
             <HeaderLink to="/">Index.tsx</HeaderLink>

@@ -3,25 +3,25 @@ import styled from 'styled-components';
 
 import photo from '../img/ezh.jpg';
 
-import { Clock } from './Clock/Clock';
-import { Whoim } from './Whoim/Whoim';
-import { EffectTest } from './EffectTest/EffectTest';
-import { StateTest } from './StateTest/StateTest';
-import { Card } from './Card/Card';
-import { Timer } from './Timer/Timer';
-import { Indent } from './Indent/Indent';
-import { CatsAPITest } from './CatsAPITest/CatsAPITest';
-import { ChartJsTest } from './ChartJsTest/ChartJsTest';
-import { InputTest } from './InputTest/InputTest';
-import { Counter } from './Counter/Counter';
-import { Button } from './Button/Button';
-import { TableTest } from './TableTest/TableTest';
-import { ClassTest } from './ClassTest/ClassTest';
-import { UserCards } from './UserCards/UserCards';
+import { Clock } from './Clock';
+import { Whoim } from './Whoim';
+import { EffectTest } from './EffectTest';
+import { StateTest } from './StateTest';
+import { Card } from './Card';
+import { Timer } from './Timer';
+import { Indent } from './Indent';
+import { CatsAPITest } from './CatsAPITest';
+import { ChartJsTest } from './ChartJsTest';
+import { InputTest } from './InputTest';
+import { Counter } from './Counter';
+import { Button } from './Button';
+import { TableTest } from './TableTest';
+import { ClassTest } from './ClassTest';
+import { UserCards } from './UserCards';
 
-const NAME = 'ddtReactCourse';
+const NAME: string = 'ddtReactCourse';
 
-const data = {
+const data: object = {
   thead: [1, 2, 3, 4, 5],
   tbody: [
     [11, 22, 33, 44, 55],
@@ -73,7 +73,6 @@ export const Index: React.FC = () => {
         diagnosis="Бурчит"
         photo={photo}
         photoDescription="В спокойном состоянии"
-        size={1}
       />
       <Timer />
       <Indent />

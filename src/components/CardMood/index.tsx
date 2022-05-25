@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
-const cardMoodInputLimit = 30;
+const cardMoodInputLimit: number = 30;
 
-const CardMoodDiv = styled.div`
+const StyledCardMood = styled.div`
   display: flex;
   border: solid 0.1em #cdcdcd;
   border-radius: 0.5em;
@@ -92,28 +92,30 @@ export const CardMood: React.FC = () => {
   const [validInput, setValidInput] = useState<boolean>(true);
   const [mood, setMood] = useState<string>('Напыжился');
 
-  const cardMoodInput = useRef<any>(null);
+  const input = useRef<HTMLInputElement | null>(null);
 
-  function toogleAndApplyCardMood() {
-    if (validInput) {
-      setMood(cardMoodInput.current.value);
+  function toogleActiveAndApply() {
+    if (validInput && input.current) {
+      setMood(input.current.value);
       setActiveInput(activeInput => !activeInput);
     }
   }
 
-  function onKeyDownCardMood(e: any) {
+  function handleKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
     if (
       activeInput &&
       validInput &&
       (e.code == 'Enter' || e.keyCode === 13 || e.code == 'NumpadEnter')
     ) {
       e.preventDefault();
-      toogleAndApplyCardMood();
+      toogleActiveAndApply();
     }
   }
 
-  function onKeyDownCardMoodInput(e: any) {
-    if (e.target.value.length > cardMoodInputLimit) {
+  function handleKeyInput(e: React.KeyboardEvent<HTMLInputElement>) {
+    const target = e.target as HTMLInputElement;
+
+    if (target.value.length > cardMoodInputLimit) {
       setValidInput(false);
     } else {
       setValidInput(true);
@@ -121,8 +123,8 @@ export const CardMood: React.FC = () => {
   }
 
   return (
-    <CardMoodDiv
-      onKeyDown={e => onKeyDownCardMood(e)}
+    <StyledCardMood
+      onKeyDown={handleKeyDown}
       data-tooltip={`Нельзя вводить более ${cardMoodInputLimit} символов!`}
       {...(validInput && { valid: true })}
       {...(activeInput && { active: true })}
@@ -131,9 +133,9 @@ export const CardMood: React.FC = () => {
         type="text"
         defaultValue={mood}
         {...(!activeInput && { readOnly: true })}
-        onKeyDown={e => onKeyDownCardMoodInput(e)}
-        onKeyUp={e => onKeyDownCardMoodInput(e)}
-        ref={cardMoodInput}
+        onKeyDown={handleKeyInput}
+        onKeyUp={handleKeyInput}
+        ref={input}
       />
       <Button
         className={[
@@ -144,10 +146,10 @@ export const CardMood: React.FC = () => {
           .filter(e => !!e)
           .join(' ')}
         {...(activeInput ? { title: 'Применить' } : { title: 'Редактировать' })}
-        onClick={toogleAndApplyCardMood}
+        onClick={toogleActiveAndApply}
         {...(validInput && { valid: true })}
         {...(activeInput && { active: true })}
       />
-    </CardMoodDiv>
+    </StyledCardMood>
   );
 };

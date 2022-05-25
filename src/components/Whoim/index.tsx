@@ -5,13 +5,13 @@ const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
 export const Whoim: React.FC = () => {
   const [whoimIsShown, setWhoimIsShown] = useState<boolean>(false);
 
-  function clickWhoimButton() {
+  const handleClickWhoimButton = () => {
     setWhoimIsShown(whoimIsShown => !whoimIsShown);
-  }
+  };
 
   return (
     <div>
-      <button onClick={clickWhoimButton}>
+      <button onClick={handleClickWhoimButton}>
         {whoimIsShown ? 'Закрыть' : 'Открыть'} мое имя
       </button>
       {whoimIsShown && whoimText}

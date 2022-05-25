@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import {PieCountries} from '../PieCountries/PieCountries';
+import { PieCountries } from '../PieCountries';
 
 export const ChartJsTest: React.FC = () => {
   const [data, setData] = useState([]);
@@ -23,9 +23,9 @@ export const ChartJsTest: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <h1>Статистика заражений Covid-19 по странам</h1>
       <PieCountries data={data} />
-    </div>
+    </>
   );
 };

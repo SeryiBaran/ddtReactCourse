@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { Button } from '../Button/Button';
-import { Loader } from '../Loader/Loader';
-
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -68,15 +65,16 @@ export const UserCards: React.FC = () => {
 
   return (
     <Cards>
-      {users && users.map((user: UserTypes) => (
-        <Card key={user?.uuid}>
-          <Img src={user?.avatar} alt="Аватарка" />
-          <Name>
-            {user?.firstname} {user?.lastname}
-          </Name>
-          <span>{user?.about}</span>
-        </Card>
-      ))}
+      {users &&
+        users.map((user: UserTypes) => (
+          <Card key={user?.uuid}>
+            <Img src={user?.avatar} alt="Аватарка" />
+            <Name>
+              {user?.firstname} {user?.lastname}
+            </Name>
+            <span>{user?.about}</span>
+          </Card>
+        ))}
     </Cards>
   );
 };

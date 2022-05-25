@@ -4,9 +4,9 @@ export const StateTest: React.FC = () => {
   const [liveTime, setLiveTime] = useState<number>(3);
   let timerID: number;
 
-  function tick() {
+  const tick = () => {
     setLiveTime(liveTime => liveTime - 1);
-  }
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -21,10 +21,10 @@ export const StateTest: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <>
       {!(liveTime < 1) && (
         <h2>Эта надпись исчезнет через {liveTime} секунд!</h2>
       )}
-    </div>
+    </>
   );
 };

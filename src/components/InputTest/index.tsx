@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import {Input} from '../Input/Input'
+import { Input } from '../Input';
 
 export const InputTest: React.FC = () => {
   const [value, setValue] = useState<string>('Это - управляемый input!');

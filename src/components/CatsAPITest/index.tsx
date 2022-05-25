@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { Button } from '../Button/Button';
-import { Loader } from '../Loader/Loader';
+import { Button } from '../Button';
+import { Loader } from '../Loader';
 
 const Img = styled.img`
   max-width: 30rem;
