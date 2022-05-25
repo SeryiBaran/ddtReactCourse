@@ -1,7 +1,7 @@
 import { atom } from 'recoil';
 
 export const globalState = atom({
-  key: 'loggedInUser',
+  key: 'globalState',
   default: {
     count: 0,
     name: 'Какие-то данные',
