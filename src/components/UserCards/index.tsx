@@ -31,7 +31,7 @@ const Name = styled.span`
   font-size: 130%;
 `;
 
-interface UserTypes {
+interface IUser {
   uuid: string;
   avatar: string;
   firstname: string;
@@ -66,7 +66,7 @@ export const UserCards: React.FC = () => {
   return (
     <Cards>
       {users &&
-        users.map((user: UserTypes) => (
+        users.map((user: IUser) => (
           <Card key={user?.uuid}>
             <Img src={user?.avatar} alt="Аватарка" />
             <Name>

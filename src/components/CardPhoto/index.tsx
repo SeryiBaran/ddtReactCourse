@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface CardPhotoProps {
+interface ICardPhoto {
   photoUrl: string;
   photoDescription: any;
 }
@@ -31,13 +31,16 @@ const DescriptionContent = styled.span`
   margin-left: 0.3em;
 `;
 
-export const CardPhoto = (props: CardPhotoProps) => {
+export const CardPhoto: React.FC<ICardPhoto> = ({
+  photoUrl,
+  photoDescription,
+}) => {
   return (
     <StyledCardPhoto>
-      <Photo src={props.photoUrl} alt="Photo" />
+      <Photo src={photoUrl} alt="Photo" />
       <Description>
         <i className="fas fa-arrow-up"></i>
-        <DescriptionContent>{props.photoDescription}</DescriptionContent>
+        <DescriptionContent>{photoDescription}</DescriptionContent>
       </Description>
     </StyledCardPhoto>
   );

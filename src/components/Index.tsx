@@ -20,16 +20,14 @@ import { ClassTest } from './ClassTest';
 import { UserCards } from './UserCards';
 import { RecoilTest } from './RecoilTest';
 
-import { globalState } from '../state/globalState';
-
 const NAME: string = 'ddtReactCourse';
 
-const data: object = {
-  thead: [1, 2, 3, 4, 5],
+const data = {
+  thead: ['Заголовок', 'Заголовок', 'Заголовок', 'Заголовок', 'Заголовок'],
   tbody: [
-    [11, 22, 33, 44, 55],
-    [11, 22, 33, 44, 55],
-    [11, 22, 33, 44, 55],
+    ['Столбец', 'Столбец', 'Столбец', 'Столбец', 'Столбец'],
+    ['Столбец', 'Столбец', 'Столбец', 'Столбец', 'Столбец'],
+    ['Столбец', 'Столбец', 'Столбец', 'Столбец', 'Столбец'],
   ],
 };
 

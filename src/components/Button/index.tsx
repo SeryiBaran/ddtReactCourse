@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-interface MyButtonProps {
+interface IButton {
   defaultIcon?: boolean;
   styles?: string;
   disabled?: boolean;
@@ -60,7 +60,7 @@ const ButtonStyled = styled.button`
   ${({ styles }: any) => styles}
 `;
 
-export const Button: React.FC<MyButtonProps> = ({
+export const Button: React.FC<IButton> = ({
   defaultIcon,
   children,
   styles,

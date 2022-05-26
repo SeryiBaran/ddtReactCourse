@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface CardElemProps {
+interface ICardElem {
   elem: any;
   elemContent: any;
 }
@@ -17,11 +17,11 @@ const StyledCardElem = styled.div`
   }
 `;
 
-export const CardElem: React.FC<CardElemProps> = props => {
+export const CardElem: React.FC<ICardElem> = ({ elem, elemContent }) => {
   return (
     <StyledCardElem>
       <p>
-        <span>{props.elem}:</span> {props.elemContent}
+        <span>{elem}:</span> {elemContent}
       </p>
     </StyledCardElem>
   );

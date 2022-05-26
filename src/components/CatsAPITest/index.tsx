@@ -13,12 +13,12 @@ const Img = styled.img`
   background-color: #91a7ff;
 `;
 
-interface CatType {
+interface ICat {
   url: string;
 }
 
 export const CatsAPITest: React.FC = () => {
-  const [cat, setCat] = useState<CatType>({
+  const [cat, setCat] = useState<ICat>({
     url: '',
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);

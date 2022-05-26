@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil';
 
 import { MiniButton } from '../MiniButton';
 
-import { globalState } from '../../state/globalState';
+import { GlobalState } from '../../state/GlobalState';
 
 
 const StyledRecoilTest = styled.div`
@@ -13,7 +13,7 @@ const StyledRecoilTest = styled.div`
 `;
 
 export const RecoilTest: React.FC = () => {
-  const [data, setData] = useRecoilState(globalState);
+  const [data, setData] = useRecoilState(GlobalState);
   return (
     <StyledRecoilTest>
       <p>Все компоненты "RecoilTest" связаны с помощью Recoil!</p>

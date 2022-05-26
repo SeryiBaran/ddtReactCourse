@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-interface ReturnTypes {
+interface IReturnUseCounter {
   counter: number;
   increment: () => void;
   decrement: () => void;
@@ -12,7 +12,7 @@ interface ReturnTypes {
  * @param step default 1
  * @returns value, increment func and decrement func
  */
-export const useCounter = (initialValue = 0, step = 1): ReturnTypes => {
+export const useCounter = (initialValue = 0, step = 1): IReturnUseCounter => {
   const [counter, setCounter] = useState<number>(initialValue);
   const increment = () => {
     setCounter((counter: number) => counter + step);

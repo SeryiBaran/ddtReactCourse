@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 import { Input } from '../Input';
 
-interface ClassTestState {
+interface IStateClassTest {
   value: string;
 }
 
-export class ClassTest extends React.Component<any, ClassTestState> {
-  constructor(props: ClassTestState) {
+export class ClassTest extends React.Component<any, IStateClassTest> {
+  constructor(props: IStateClassTest) {
     super(props);
     this.state = {
       value:
