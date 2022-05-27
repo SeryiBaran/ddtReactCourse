@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
+import { recoilPersist } from 'recoil-persist';
 
 import { MiniButton } from '../MiniButton';
 
-import { GlobalState } from '../../state/GlobalState';
-
+import { IGlobalState, defaultValue, GlobalState } from '../../state/GlobalState';
 
 const StyledRecoilTest = styled.div`
   border: 1px solid #000;
@@ -13,25 +13,55 @@ const StyledRecoilTest = styled.div`
 `;
 
 export const RecoilTest: React.FC = () => {
-  const [data, setData] = useRecoilState(GlobalState);
+  const [GSInstance, setGSInstance] =
+    useRecoilState<IGlobalState>(GlobalState);
   return (
     <StyledRecoilTest>
-      <p>Все компоненты "RecoilTest" связаны с помощью Recoil!</p>
+      <p>
+        Все компоненты "RecoilTest" связаны общим состояием с помощью Recoil.
+      </p>
+      <p>Состояние хранится в localStorage.</p>
       <MiniButton
         onClick={() => {
-          setData(data => ({
-            ...data,
-            count: data.count + 1,
+          for (let i in localStorage) {
+            delete localStorage[i];
+          }
+        }}
+      >
+        Очистить localStorage
+      </MiniButton>
+      <MiniButton
+        onClick={() => {
+          setGSInstance(defaultValue);
+        }}
+      >
+        Установить defaultValue
+      </MiniButton>
+      <MiniButton
+        onClick={() => {
+          setGSInstance(GSInstance => ({
+            ...GSInstance,
+            count: GSInstance.count + 1,
           }));
         }}
       >
-        Увеличить data.count на 1
+        Увеличить count на 1
+      </MiniButton>
+      <MiniButton
+        onClick={() => {
+          setGSInstance(GSInstance => ({
+            ...GSInstance,
+            count: GSInstance.count - 1,
+          }));
+        }}
+      >
+        Уменьшить count на 1
       </MiniButton>
       <p>
-        data.count: <b>{data.count}</b>
+        GlobalState.count: <b>{GSInstance.count}</b>
       </p>
       <p>
-        data.name: <b>{data.name}</b>
+        GlobalState.text: <b>{GSInstance.text}</b>
       </p>
     </StyledRecoilTest>
   );
