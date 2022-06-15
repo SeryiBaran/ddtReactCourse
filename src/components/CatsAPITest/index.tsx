@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { Button } from '../Button';
-import { Loader } from '../Loader';
+import { Button } from '@/components/Button';
+import { Loader } from '@/components/Loader';
+
+const fetchUrl: string = 'https://api.thecatapi.com/v1/images/search';
 
 const Img = styled.img`
   max-width: 30rem;
@@ -13,31 +15,26 @@ const Img = styled.img`
   background-color: #91a7ff;
 `;
 
-interface ICat {
-  url: string;
-}
-
-export const CatsAPITest: React.FC = () => {
-  const [cat, setCat] = useState<ICat>({
+export const CatsAPITest: FC = () => {
+  const [cat, setCat] = useState({
     url: '',
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const fetchUrl: string = 'https://api.thecatapi.com/v1/images/search';
 
-  async function fetchData() {
+  const fetchData = async () => {
     setIsLoading(true);
     axios
-      .get(fetchUrl)
-      .then(response =>
-        setCat(() => {
-          setIsLoading(false);
-          return response.data[0];
-        }),
-      )
+      .get(fetchUrl || '')
+      .then(response => {
+        setCat(response.data[0]);
+      })
       .catch(error => {
         console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
-  }
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -58,7 +55,7 @@ export const CatsAPITest: React.FC = () => {
         {isLoading ? <Loader /> : ''}
         {isLoading ? 'Загрузка...' : 'Другой кот'}
       </Button>
-      <Img src={cat.url} alt="Кот" />
+      {!!cat && <Img src={cat?.url} alt="Кот" />}
     </div>
   );
 };

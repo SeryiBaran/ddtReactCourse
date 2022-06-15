@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
@@ -14,7 +14,7 @@ const PieContainer = styled.div`
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const PieCountries: React.FC<IPieCountries> = ({ data }) => {
+export const PieCountries: FC<IPieCountries> = ({ data }) => {
   const chartJsDataBGColors = [
     '#D180139E',
     '#6EAC3B9E',

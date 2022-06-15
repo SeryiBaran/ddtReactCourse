@@ -1,31 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { PieCountries } from '../PieCountries';
+import { PieCountries } from '@/components/PieCountries';
 
-export const ChartJsTest: React.FC = () => {
-  const [data, setData] = useState([]);
+const fetchUrl: string = 'https://disease.sh/v3/covid-19/countries?sort=cases';
+
+export const ChartJsTest: FC = () => {
+  const [data, setData] = useState(null);
+
+  const fetchData = async () => {
+    axios
+      .get(fetchUrl || '')
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const [response] = await Promise.all([
-          axios.get('https://disease.sh/v3/covid-19/countries?sort=cases'),
-        ]);
-
-        setData(response.data);
-      } catch (e) {
-        console.log(e);
-      }
-    }
-
     fetchData();
   }, []);
 
   return (
     <>
       <h1>Статистика заражений Covid-19 по странам</h1>
-      <PieCountries data={data} />
+      {!!data && <PieCountries data={data} />}
     </>
   );
 };

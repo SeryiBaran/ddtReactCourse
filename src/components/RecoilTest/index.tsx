@@ -1,11 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
 import { recoilPersist } from 'recoil-persist';
 
-import { MiniButton } from '../MiniButton';
+import { MiniButton } from '@/components/MiniButton';
 
-import { IGlobalState, defaultValue, GlobalState } from '../../state/GlobalState';
+import { IGlobalState, defaultValue, GlobalState } from '@/state/GlobalState';
 
 const StyledRecoilTest = styled.div`
   border: 1px solid #000;
@@ -13,8 +13,7 @@ const StyledRecoilTest = styled.div`
 `;
 
 export const RecoilTest: React.FC = () => {
-  const [GSInstance, setGSInstance] =
-    useRecoilState<IGlobalState>(GlobalState);
+  const [GSInstance, setGSInstance] = useRecoilState<IGlobalState>(GlobalState);
   return (
     <StyledRecoilTest>
       <p>

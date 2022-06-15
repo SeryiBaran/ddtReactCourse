@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 
 const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
 
-export const Whoim: React.FC = () => {
+export const Whoim: FC = () => {
   const [whoimIsShown, setWhoimIsShown] = useState<boolean>(false);
 
   const handleClickWhoimButton = () => {

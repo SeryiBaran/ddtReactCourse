@@ -1,24 +1,24 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 
-import photo from '../img/ezh.jpg';
+import photo from '@/img/ezh.jpg';
 
-import { Clock } from './Clock';
-import { Whoim } from './Whoim';
-import { EffectTest } from './EffectTest';
-import { StateTest } from './StateTest';
-import { Card } from './Card';
-import { Timer } from './Timer';
-import { Indent } from './Indent';
-import { CatsAPITest } from './CatsAPITest';
-import { ChartJsTest } from './ChartJsTest';
-import { InputTest } from './InputTest';
-import { Counter } from './Counter';
-import { Button } from './Button';
-import { TableTest } from './TableTest';
-import { ClassTest } from './ClassTest';
-import { UserCards } from './UserCards';
-import { RecoilTest } from './RecoilTest';
+import { Clock } from '@/components/Clock';
+import { Whoim } from '@/components/Whoim';
+import { EffectTest } from '@/components/EffectTest';
+import { StateTest } from '@/components/StateTest';
+import { Card } from '@/components/Card';
+import { Timer } from '@/components/Timer';
+import { Indent } from '@/components/Indent';
+import { CatsAPITest } from '@/components/CatsAPITest';
+import { ChartJsTest } from '@/components/ChartJsTest';
+import { InputTest } from '@/components/InputTest';
+import { Counter } from '@/components/Counter';
+import { Button } from '@/components/Button';
+import { TableTest } from '@/components/TableTest';
+import { ClassTest } from '@/components/ClassTest';
+import { UserCards } from '@/components/UserCards';
+import { RecoilTest } from '@/components/RecoilTest';
 
 const NAME: string = 'ddtReactCourse';
 
@@ -48,7 +48,7 @@ const StyledIndex = styled.div`
   padding: 0.8rem;
 `;
 
-export const Index: React.FC = () => {
+export const Index: FC = () => {
   return (
     <StyledIndex id="index">
       <Head>

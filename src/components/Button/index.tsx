@@ -1,15 +1,20 @@
-import React from 'react';
+import { FC } from 'react';
 import styled, { css } from 'styled-components';
 
 interface IButton {
   defaultIcon?: boolean;
-  styles?: string;
-  disabled?: boolean;
+  children: React.ReactNode;
   onClick?: () => void;
+}
+
+interface IButtonStyled {
+  defaultIcon?: boolean;
   children: React.ReactNode;
 }
 
-const ButtonStyled = styled.button`
+const ButtonStyled = styled.button.attrs(
+  (props: IButtonStyled) => ({}),
+)<IButtonStyled>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +41,8 @@ const ButtonStyled = styled.button`
     transition-property: fill, background;
   }
 
-  ${({ disabled }: any) =>
-    !disabled
+  ${props =>
+    !props.disabled
       ? css`
           :active {
             transform: translateY(0.4rem);
@@ -57,17 +62,11 @@ const ButtonStyled = styled.button`
           filter: grayscale(90%);
           opacity: 0.8;
         `}
-  ${({ styles }: any) => styles}
 `;
 
-export const Button: React.FC<IButton> = ({
-  defaultIcon,
-  children,
-  styles,
-  ...props
-}) => {
+export const Button: FC<IButton> = ({ defaultIcon, children, ...props }) => {
   return (
-    <ButtonStyled {...{ styles }} {...props}>
+    <ButtonStyled {...props}>
       {defaultIcon && (
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,11 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 
-import { MiniButton } from '../MiniButton';
+import { MiniButton } from '@/components/MiniButton';
 
-import { useCounter } from '../../hooks/useCounter';
+import { useCounter } from '@/hooks/useCounter';
 
-export const Counter = () => {
+export const Counter: FC = () => {
   const { counter, increment, decrement } = useCounter(0);
 
   return (

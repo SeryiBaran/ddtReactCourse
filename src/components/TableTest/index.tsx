@@ -1,30 +1,26 @@
-import React from 'react';
+import { FC, ReactNode } from 'react';
 
 interface ITableTest {
   data: {
-    thead: string[] | React.ReactNode[];
-    tbody: string[][] | React.ReactNode[][];
+    thead: string[] | ReactNode[];
+    tbody: string[][] | ReactNode[][];
   };
 }
 
-export const TableTest: React.FC<ITableTest> = ({ data }) => {
+export const TableTest: FC<ITableTest> = ({ data }) => {
   const { thead, tbody } = data;
-  const theadContent = thead.map(
-    (elem: string | React.ReactNode, i: number) => {
-      return <th key={i}>{elem}</th>;
-    },
-  );
-  const tbodyContent = tbody.map(
-    (elem: string[] | React.ReactNode[], i: number) => {
-      return (
-        <tr key={i}>
-          {elem.map((elem2: string | React.ReactNode, i: number) => {
-            return <td key={i}>{elem2}</td>;
-          })}
-        </tr>
-      );
-    },
-  );
+  const theadContent = thead.map((elem: string | ReactNode, i: number) => {
+    return <th key={i}>{elem}</th>;
+  });
+  const tbodyContent = tbody.map((elem: string[] | ReactNode[], i: number) => {
+    return (
+      <tr key={i}>
+        {elem.map((elem2: string | ReactNode, i: number) => {
+          return <td key={i}>{elem2}</td>;
+        })}
+      </tr>
+    );
+  });
   return (
     <table>
       <thead>

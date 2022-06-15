@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 
-export const StateTest: React.FC = () => {
+export const StateTest: FC = () => {
   const [liveTime, setLiveTime] = useState<number>(3);
   let timerID: number;
 

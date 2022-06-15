@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 
-export const EffectTest: React.FC = () => {
+export const EffectTest: FC = () => {
   const [count, setCount] = useState<number>(0);
 
   let paragraphCountText = `Вы нажали на кнопочку ${count} раз`;

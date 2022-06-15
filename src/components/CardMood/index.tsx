@@ -1,9 +1,21 @@
-import React, { useState, useRef } from 'react';
+import { FC, useState, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
 const cardMoodInputLimit: number = 30;
 
-const StyledCardMood = styled.div`
+interface IStyledCardMood {
+  active?: boolean;
+  valid?: boolean;
+}
+
+interface IButton {
+  active?: boolean;
+  valid?: boolean;
+}
+
+const StyledCardMood = styled.div.attrs(
+  (props: IStyledCardMood) => ({}),
+)<IStyledCardMood>`
   display: flex;
   border: solid 0.1em #cdcdcd;
   border-radius: 0.5em;
@@ -22,14 +34,14 @@ const StyledCardMood = styled.div`
     pointer-events: none;
     transition: 150ms;
   }
-  ${({ active }: any) =>
-    active &&
+  ${props =>
+    props.active &&
     css`
       transform: scale(1.1);
       box-shadow: 0 0 1.5em 0.8em rgb(0 0 0 / 20%);
     `}
-  ${({ valid }: any) =>
-    !valid &&
+  ${props =>
+    !props.valid &&
     css`
       border: solid red 0.1em;
       ::after {
@@ -52,7 +64,7 @@ const Input = styled.input`
   background-color: transparent;
 `;
 
-const Button = styled.button`
+const Button = styled.button.attrs((props: IButton) => ({}))<IButton>`
   min-width: 2em;
   border-radius: inherit;
   border-top-left-radius: 0;
@@ -69,14 +81,14 @@ const Button = styled.button`
   ::before {
     font-size: 1.4em;
   }
-  ${({ active }: any) =>
-    active &&
+  ${props =>
+    props.active &&
     css`
       background-color: rgb(199 255 206);
       color: #0c7a00;
     `}
-  ${({ valid }: any) =>
-    !valid &&
+  ${props =>
+    !props.valid &&
     css`
       background-color: rgb(255 199 199);
       color: #b80000;
@@ -87,7 +99,7 @@ const Button = styled.button`
     `}
 `;
 
-export const CardMood: React.FC = () => {
+export const CardMood: FC = () => {
   const [activeInput, setActiveInput] = useState<boolean>(false);
   const [validInput, setValidInput] = useState<boolean>(true);
   const [mood, setMood] = useState<string>('Напыжился');
@@ -126,8 +138,8 @@ export const CardMood: React.FC = () => {
     <StyledCardMood
       onKeyDown={handleKeyDown}
       data-tooltip={`Нельзя вводить более ${cardMoodInputLimit} символов!`}
-      {...(validInput && { valid: true })}
-      {...(activeInput && { active: true })}
+      {...{ valid: validInput }}
+      {...{ active: activeInput }}
     >
       <Input
         type="text"
@@ -147,8 +159,8 @@ export const CardMood: React.FC = () => {
           .join(' ')}
         {...(activeInput ? { title: 'Применить' } : { title: 'Редактировать' })}
         onClick={toogleActiveAndApply}
-        {...(validInput && { valid: true })}
-        {...(activeInput && { active: true })}
+        {...{ valid: validInput }}
+        {...{ active: activeInput }}
       />
     </StyledCardMood>
   );

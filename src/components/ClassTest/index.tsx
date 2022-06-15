@@ -1,13 +1,13 @@
-import React from 'react';
+import { Component } from 'react';
 import styled from 'styled-components';
 
-import { Input } from '../Input';
+import { Input } from '@/components/Input';
 
 interface IStateClassTest {
   value: string;
 }
 
-export class ClassTest extends React.Component<any, IStateClassTest> {
+export class ClassTest extends Component<any, IStateClassTest> {
   constructor(props: IStateClassTest) {
     super(props);
     this.state = {

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 
-export const Clock: React.FC = () => {
+export const Clock: FC = () => {
   const [date, setDate] = useState<Date>(new Date());
   let timerID: number;
 
-  function tick() {
+  const tick = () => {
     setDate(new Date());
-  }
+  };
 
   useEffect(() => {
     let isMounted = true;

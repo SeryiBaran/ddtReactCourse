@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+
+const fetchUrl = process.env.MOCKAPI_URL;
 
 const Cards = styled.div`
   display: flex;
@@ -39,12 +41,10 @@ interface IUser {
   about: string;
 }
 
-export const UserCards: React.FC = () => {
-  const fetchUrl = process.env.MOCKAPI_URL;
-
+export const UserCards: FC = () => {
   const [users, setUsers] = useState([]);
 
-  async function fetchData() {
+  const fetchData = async () => {
     axios
       .get(fetchUrl || '')
       .then(response => {
@@ -53,7 +53,7 @@ export const UserCards: React.FC = () => {
       .catch(error => {
         console.log(error);
       });
-  }
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -67,12 +67,12 @@ export const UserCards: React.FC = () => {
     <Cards>
       {users &&
         users.map((user: IUser) => (
-          <Card key={user?.uuid}>
-            <Img src={user?.avatar} alt="Аватарка" />
+          <Card key={user.uuid}>
+            <Img src={user.avatar} alt="Аватарка" />
             <Name>
-              {user?.firstname} {user?.lastname}
+              {user.firstname} {user.lastname}
             </Name>
-            <span>{user?.about}</span>
+            <span>{user.about}</span>
           </Card>
         ))}
     </Cards>

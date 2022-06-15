@@ -30,10 +30,12 @@
     "prefer-const": "error",
     "no-use-before-define": "error",
     "prettier/prettier": ["error"],
+    // ----- Мои правила -----
     "@typescript-eslint/no-explicit-any": 0,
     // "@typescript-eslint/no-unused-vars": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error"
+    // ----- /Мои правила -----
   },
   "ignorePatterns": ["*.svg", "*.css", "*.png", "*.jpg"],
   "settings": {

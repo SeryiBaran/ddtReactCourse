@@ -1,15 +1,15 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import { ReactLocation, Outlet, Router } from '@tanstack/react-location';
 import { RecoilRoot } from 'recoil';
 
-import '../standard.css';
+import '@/standard.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import { GlobalStyle } from '../styles/global';
-import { Header, HeaderLinks, HeaderLink } from './Header';
-import { Index } from './Index';
-import { Second } from './Second';
+import { GlobalStyle } from '@/styles/global';
+import { Header, HeaderLinks, HeaderLink } from '@/components/Header';
+import { Index } from '@/components/Index';
+import { Second } from '@/components/Second';
 
 const reactLocation = new ReactLocation();
 
@@ -28,7 +28,7 @@ const TextLogo = styled.a`
   font-size: 1.6em;
 `;
 
-export const App: React.FC = () => {
+export const App: FC = () => {
   return (
     <div id="app">
       <RecoilRoot>

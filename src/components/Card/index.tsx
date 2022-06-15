@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 
-import { CardElem } from '../CardElem';
-import { CardPhoto } from '../CardPhoto';
-import { CardMood } from '../CardMood';
+import { CardElem } from '@/components/CardElem';
+import { CardPhoto } from '@/components/CardPhoto';
+import { CardMood } from '@/components/CardMood';
 
 interface ICard {
   name: string;
@@ -26,7 +26,7 @@ const CardContent = styled.div`
   flex: 1 1 auto;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 30em;
+  max-width: 34em;
   padding: 1.5em;
   gap: 1.5em;
   border-radius: 0.2em;
@@ -38,7 +38,7 @@ const CardRows = styled.div`
   flex: 1 1 auto;
 `;
 
-export const Card: React.FC<ICard> = ({
+export const Card: FC<ICard> = ({
   name,
   lastname,
   birth,

@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-export const Second: React.FC = () => {
+export const Second: FC = () => {
   return (
     <div>
       Это страница Second!
