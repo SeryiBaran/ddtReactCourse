@@ -2,6 +2,14 @@ import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
+interface IUser {
+  uuid: string;
+  avatar: string;
+  firstname: string;
+  lastname: string;
+  about: string;
+}
+
 const fetchUrl = process.env.MOCKAPI_URL;
 
 const Cards = styled.div`
@@ -32,14 +40,6 @@ const Img = styled.img`
 const Name = styled.span`
   font-size: 130%;
 `;
-
-interface IUser {
-  uuid: string;
-  avatar: string;
-  firstname: string;
-  lastname: string;
-  about: string;
-}
 
 export const UserCards: FC = () => {
   const [users, setUsers] = useState([]);

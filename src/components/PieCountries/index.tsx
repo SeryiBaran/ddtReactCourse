@@ -34,12 +34,9 @@ export const PieCountries: FC<IPieCountries> = ({ data }) => {
   ];
 
   const chartJsDataLabels: Array<any> = [];
-  data.slice(0, 15).forEach((elem: any) => {
-    chartJsDataLabels.push([elem.country]);
-  });
-
   const chartJsDataCounts: Array<any> = [];
   data.slice(0, 15).forEach((elem: any) => {
+    chartJsDataLabels.push([elem.country]);
     chartJsDataCounts.push([elem.cases]);
   });
 

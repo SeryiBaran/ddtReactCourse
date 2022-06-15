@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import styled, { css } from 'styled-components';
 
+interface IButtonStyled {
+  defaultIcon?: boolean;
+  children: React.ReactNode;
+}
+
 interface IButton {
   defaultIcon?: boolean;
   children: React.ReactNode;
   onClick?: () => void;
-}
-
-interface IButtonStyled {
-  defaultIcon?: boolean;
-  children: React.ReactNode;
 }
 
 const ButtonStyled = styled.button.attrs(
