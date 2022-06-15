@@ -34,7 +34,8 @@
     "@typescript-eslint/no-explicit-any": 0,
     // "@typescript-eslint/no-unused-vars": "off",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "off"
     // ----- /Мои правила -----
   },
   "ignorePatterns": ["*.svg", "*.css", "*.png", "*.jpg"],

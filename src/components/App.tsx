@@ -7,6 +7,7 @@ import '@/standard.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import { GlobalStyle } from '@/styles/global';
+
 import { Header, HeaderLinks, HeaderLink } from '@/components/Header';
 import { Index } from '@/components/Index';
 import { Second } from '@/components/Second';
