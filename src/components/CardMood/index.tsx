@@ -1,4 +1,4 @@
-import { FC, useState, useRef } from 'react';
+import { FC, useState, useRef, KeyboardEvent } from 'react';
 import styled, { css } from 'styled-components';
 
 const cardMoodInputLimit = 30;
@@ -111,7 +111,7 @@ export const CardMood: FC = () => {
     }
   }
 
-  function handleKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
+  function handleKeyDown(e: KeyboardEvent<HTMLDivElement>) {
     if (
       activeInput &&
       validInput &&
@@ -122,7 +122,7 @@ export const CardMood: FC = () => {
     }
   }
 
-  function handleKeyInput(e: React.KeyboardEvent<HTMLInputElement>) {
+  function handleKeyInput(e: KeyboardEvent<HTMLInputElement>) {
     const target = e.target as HTMLInputElement;
 
     if (target.value.length > cardMoodInputLimit) {
