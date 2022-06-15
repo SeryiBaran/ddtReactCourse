@@ -8,6 +8,7 @@ interface IUser {
   firstname: string;
   lastname: string;
   about: string;
+  mail: string;
 }
 
 const fetchUrl = process.env.MOCKAPI_URL;
@@ -35,6 +36,7 @@ const Img = styled.img`
   width: 6rem;
   object-fit: cover;
   border-radius: 100%;
+  border: solid 1px #000;
 `;
 
 const Name = styled.span`
@@ -73,6 +75,12 @@ export const UserCards: FC = () => {
               {user.firstname} {user.lastname}
             </Name>
             <span>{user.about}</span>
+            <a href={`mailto:${user.mail}`}>
+              <i className="fa-solid fa-envelope"></i>{' '}
+              {user.mail.length > 25
+                ? `...${user.mail.substr(user.mail.length - 25)}`
+                : user.mail}
+            </a>
           </Card>
         ))}
     </Cards>

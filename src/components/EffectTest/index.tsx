@@ -18,6 +18,14 @@ export const EffectTest: FC = () => {
     <>
       <button onClick={handleButtonClick}>Нажми меня</button>
       <p>{paragraphCountText}</p>
+      {count >= 50 && count < 100 && (
+        <p>
+          Вы, царь батюшка,{' '}
+          <span title="BASE64 encoded">0LXQsdCw0L3Rg9C70LjRgdGM</span>?
+        </p>
+      )}
+      {count >= 100 && count < 150 && <p>Новый рекорд!</p>}
+      {count >= 150 && <p>Новый новый рекорд!</p>}
     </>
   );
 };

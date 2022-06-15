@@ -3,8 +3,8 @@ import { Link } from '@tanstack/react-location';
 
 export const Header = styled.header`
   padding: 1.5rem;
-  background-color: RGBA(240, 240, 240, 0.55);
-  backdrop-filter: blur(5px);
+  background-color: #f8f8f8;
+  border-bottom: solid 1px #cbcbcb;
   display: flex;
   justify-content: space-between;
   align-items: center;
