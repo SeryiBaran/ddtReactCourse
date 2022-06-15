@@ -1,7 +1,7 @@
 import { FC, useState, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
-const cardMoodInputLimit: number = 30;
+const cardMoodInputLimit = 30;
 
 interface IStyledCardMood {
   active?: boolean;
@@ -13,9 +13,7 @@ interface IButton {
   valid?: boolean;
 }
 
-const StyledCardMood = styled.div.attrs(
-  (props: IStyledCardMood) => ({}),
-)<IStyledCardMood>`
+const StyledCardMood = styled.div.attrs(() => ({}))<IStyledCardMood>`
   display: flex;
   border: solid 0.1em #cdcdcd;
   border-radius: 0.5em;
@@ -64,7 +62,7 @@ const Input = styled.input`
   background-color: transparent;
 `;
 
-const Button = styled.button.attrs((props: IButton) => ({}))<IButton>`
+const Button = styled.button.attrs(() => ({}))<IButton>`
   min-width: 2em;
   border-radius: inherit;
   border-top-left-radius: 0;

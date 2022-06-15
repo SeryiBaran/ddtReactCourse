@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { PieCountries } from '@/components/PieCountries';
 
-const fetchUrl: string = 'https://disease.sh/v3/covid-19/countries?sort=cases';
+const fetchUrl = 'https://disease.sh/v3/covid-19/countries?sort=cases';
 
 export const ChartJsTest: FC = () => {
   const [data, setData] = useState(null);

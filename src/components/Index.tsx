@@ -20,7 +20,7 @@ import { ClassTest } from '@/components/ClassTest';
 import { UserCards } from '@/components/UserCards';
 import { RecoilTest } from '@/components/RecoilTest';
 
-const NAME: string = 'ddtReactCourse';
+const NAME = 'ddtReactCourse';
 
 const data = {
   thead: ['Заголовок', 'Заголовок', 'Заголовок', 'Заголовок', 'Заголовок'],

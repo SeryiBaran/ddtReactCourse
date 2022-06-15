@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
-import { recoilPersist } from 'recoil-persist';
 
 import { MiniButton } from '@/components/MiniButton';
 
@@ -12,17 +11,18 @@ const StyledRecoilTest = styled.div`
   padding: 1rem;
 `;
 
-export const RecoilTest: React.FC = () => {
+export const RecoilTest: FC = () => {
   const [GSInstance, setGSInstance] = useRecoilState<IGlobalState>(GlobalState);
   return (
     <StyledRecoilTest>
       <p>
-        Все компоненты "RecoilTest" связаны общим состояием с помощью Recoil.
+        Все компоненты &quotRecoilTest&quot связаны общим состояием с помощью
+        Recoil.
       </p>
       <p>Состояние хранится в localStorage.</p>
       <MiniButton
         onClick={() => {
-          for (let i in localStorage) {
+          for (const i in localStorage) {
             delete localStorage[i];
           }
         }}

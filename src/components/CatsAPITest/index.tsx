@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Button } from '@/components/Button';
 import { Loader } from '@/components/Loader';
 
-const fetchUrl: string = 'https://api.thecatapi.com/v1/images/search';
+const fetchUrl = 'https://api.thecatapi.com/v1/images/search';
 
 const Img = styled.img`
   max-width: 30rem;
