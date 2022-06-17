@@ -16,8 +16,7 @@ export const RecoilTest: FC = () => {
   return (
     <StyledRecoilTest>
       <p>
-        Все компоненты &quotRecoilTest&quot связаны общим состояием с помощью
-        Recoil.
+        Все компоненты "RecoilTest" связаны общим состояием с помощью Recoil.
       </p>
       <p>Состояние хранится в localStorage.</p>
       <MiniButton
