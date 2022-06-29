@@ -2,11 +2,12 @@ import { FC } from 'react';
 import styled, { css } from 'styled-components';
 
 interface IButtonStyled {
-  defaultIcon?: boolean;
-  children: React.ReactNode;
+  disabled?: boolean;
 }
 
-interface IButton extends IButtonStyled {
+interface IButton {
+  children: React.ReactNode;
+  defaultIcon?: boolean;
   onClick?: () => void;
 }
 
