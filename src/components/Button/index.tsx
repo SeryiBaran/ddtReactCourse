@@ -6,9 +6,7 @@ interface IButtonStyled {
   children: React.ReactNode;
 }
 
-interface IButton {
-  defaultIcon?: boolean;
-  children: React.ReactNode;
+interface IButton extends IButtonStyled {
   onClick?: () => void;
 }
 
