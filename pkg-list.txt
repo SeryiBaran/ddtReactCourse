@@ -1,5 +1,0 @@
-Обновление пакетов:
-P.S. При установке зависимости, нужно обновлять список!
-
-npm i --save @fortawesome/fontawesome-free @tanstack/react-location axios chart.js dotenv react react-chartjs-2 react-dom recoil recoil-persist styled-components
-npm i --save-dev @types/react @types/react-dom @types/styled-components @typescript-eslint/eslint-plugin @typescript-eslint/parser @vitejs/plugin-react browser-sync eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react prettier typescript vite
