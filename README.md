@@ -1,7 +1,9 @@
 # ddtReactCourse
-![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=ddt-react-course)
+
+![Vercel status](https://therealsujitk-vercel-badge.vercel.app/?app=ddt-react-course)
 
 ## How to start development server
+
 1. Make sure that the node.js are installed and working;  
 
 2. If NPM dependencies are not installed, install them with the command:  
@@ -11,6 +13,7 @@
 `npm run dev`  
 
 ## How to build
+
 1. Make sure that the node.js are installed and working;  
 
 2. If NPM dependencies are not installed, install them with the command:  
