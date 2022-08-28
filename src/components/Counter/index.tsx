@@ -1,4 +1,4 @@
-import { MiniButton } from '@/components/MiniButton';
+import { MiniButton } from '@/components';
 
 import { useCounter } from '@/hooks/useCounter';
 

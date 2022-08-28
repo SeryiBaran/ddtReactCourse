@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { Input } from '@/components/Input';
+import { Input } from '@/components';
 
 interface IStateClassTest {
   value: string;

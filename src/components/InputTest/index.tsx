@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Input } from '@/components/Input';
+import { Input } from '@/components';
 
 export const InputTest = () => {
   const [value, setValue] = useState<string>('Это - управляемый input!');

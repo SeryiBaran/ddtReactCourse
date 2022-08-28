@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-import { CardElem } from '@/components/CardElem';
-import { CardPhoto } from '@/components/CardPhoto';
-import { CardMood } from '@/components/CardMood';
+import { CardElem, CardPhoto, CardMood } from '@/components';
 
 interface ICard {
   name: string;

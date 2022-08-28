@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
@@ -10,9 +9,9 @@ import { generateKey } from '@/utils/key';
 
 import { GlobalStyle } from '@/styles/global';
 
-import { Header, HeaderLinks, HeaderLink } from '@/components/Header';
-import { Index } from '@/components/Index';
-import { Second } from '@/components/Second';
+import { Header, HeaderLinks, HeaderLink } from '@/components';
+
+import { Second, Index } from '@/pages';
 
 const routes = [
   {
@@ -29,7 +28,7 @@ const TextLogo = styled.a`
   font-size: 1.6em;
 `;
 
-export const App: FC = () => {
+export const App = () => {
   return (
     <div id="app">
       <RecoilRoot>

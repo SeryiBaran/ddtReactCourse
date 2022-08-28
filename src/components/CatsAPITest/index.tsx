@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { Button } from '@/components/Button';
-import { Loader } from '@/components/Loader';
+import { Button, Loader } from '@/components';
 
 const fetchUrl = 'https://api.thecatapi.com/v1/images/search';
 

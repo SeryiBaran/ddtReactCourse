@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { PieCountries } from '@/components/PieCountries';
+import { PieCountries } from '@/components';
 
 const fetchUrl = 'https://disease.sh/v3/covid-19/countries?sort=cases';
 

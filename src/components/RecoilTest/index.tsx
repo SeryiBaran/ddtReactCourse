@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
 
-import { MiniButton } from '@/components/MiniButton';
+import { MiniButton } from '@/components';
 
 import { IGlobalState, defaultValue, GlobalState } from '@/state/GlobalState';
 
@@ -15,7 +15,8 @@ export const RecoilTest = () => {
   return (
     <StyledRecoilTest>
       <p>
-        Все компоненты "RecoilTest" связаны общим состояием с помощью Recoil.
+        Все компоненты &quot;RecoilTest&quot; связаны общим состояием с помощью
+        Recoil.
       </p>
       <p>Состояние хранится в localStorage.</p>
       <MiniButton
