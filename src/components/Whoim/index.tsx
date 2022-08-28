@@ -1,20 +1,20 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 
 const whoimText = <p>Я чокнутый линуксоид! 🤪</p>;
 
-export const Whoim: FC = () => {
-  const [whoimIsShown, setWhoimIsShown] = useState<boolean>(false);
+export const Whoim = () => {
+  const [isShown, setIsShown] = useState<boolean>(false);
 
-  const handleClickWhoimButton = () => {
-    setWhoimIsShown(whoimIsShown => !whoimIsShown);
+  const handleClickButton = () => {
+    setIsShown(isShown => !isShown);
   };
 
   return (
     <div>
-      <button onClick={handleClickWhoimButton}>
-        {whoimIsShown ? 'Закрыть' : 'Открыть'} мое имя
+      <button onClick={handleClickButton}>
+        {isShown ? 'Закрыть' : 'Открыть'} мое имя
       </button>
-      {whoimIsShown && whoimText}
+      {isShown && whoimText}
     </div>
   );
 };

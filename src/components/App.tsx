@@ -1,18 +1,18 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { ReactLocation, Outlet, Router } from '@tanstack/react-location';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
 import '@/standard.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+import { generateKey } from '@/utils/key';
 
 import { GlobalStyle } from '@/styles/global';
 
 import { Header, HeaderLinks, HeaderLink } from '@/components/Header';
 import { Index } from '@/components/Index';
 import { Second } from '@/components/Second';
-
-const reactLocation = new ReactLocation();
 
 const routes = [
   {
@@ -34,7 +34,7 @@ export const App: FC = () => {
     <div id="app">
       <RecoilRoot>
         <GlobalStyle />
-        <Router location={reactLocation} routes={routes}>
+        <BrowserRouter>
           <Header>
             <TextLogo
               href="https://github.com/SeryiBaran/ddtReactCourse"
@@ -47,8 +47,19 @@ export const App: FC = () => {
               <HeaderLink to="second">Second.tsx</HeaderLink>
             </HeaderLinks>
           </Header>
-          <Outlet />
-        </Router>
+          <Routes>
+            {!!routes &&
+              routes.map(route => {
+                return (
+                  <Route
+                    path={route.path}
+                    element={route.element}
+                    key={generateKey()}
+                  />
+                );
+              })}
+          </Routes>
+        </BrowserRouter>
       </RecoilRoot>
     </div>
   );

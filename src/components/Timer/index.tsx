@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
 import { Clock } from '@/components/Clock';
@@ -8,7 +7,7 @@ const StyledTimer = styled.h1`
   text-align: center;
 `;
 
-export const Timer: FC = () => {
+export const Timer = () => {
   return (
     <StyledTimer>
       Время в палате: <Clock />

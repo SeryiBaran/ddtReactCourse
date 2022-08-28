@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
@@ -14,7 +13,7 @@ const PieContainer = styled.div`
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const PieCountries: FC<IPieCountries> = ({ data }) => {
+export const PieCountries = ({ data }: IPieCountries) => {
   const chartJsDataBGColors = [
     '#D180139E',
     '#6EAC3B9E',
@@ -41,7 +40,7 @@ export const PieCountries: FC<IPieCountries> = ({ data }) => {
   });
 
   const chartJsDataBorderColors: Array<any> = [];
-  chartJsDataBGColors.forEach((elem, index: number) => {
+  chartJsDataBGColors.forEach((_, index: number) => {
     chartJsDataBorderColors.push(chartJsDataBGColors[index].slice(0, -2));
   });
 

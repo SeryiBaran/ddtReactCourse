@@ -1,9 +1,8 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
 interface ICardElem {
-  elem: any;
-  elemContent: any;
+  elem: string;
+  elemContent: string;
 }
 
 const StyledCardElem = styled.div`
@@ -17,7 +16,7 @@ const StyledCardElem = styled.div`
   }
 `;
 
-export const CardElem: FC<ICardElem> = ({ elem, elemContent }) => {
+export const CardElem = ({ elem, elemContent }: ICardElem) => {
   return (
     <StyledCardElem>
       <p>

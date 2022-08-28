@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
 import { CardElem } from '@/components/CardElem';
@@ -38,7 +37,7 @@ const CardRows = styled.div`
   flex: 1 1 auto;
 `;
 
-export const Card: FC<ICard> = ({
+export const Card = ({
   name,
   lastname,
   birth,
@@ -47,7 +46,7 @@ export const Card: FC<ICard> = ({
   photo,
   photoDescription,
   size,
-}) => {
+}: ICard) => {
   return (
     <CardDiv style={{ fontSize: (size || 1).toString() + 'rem' }}>
       <CardContent>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from '@tanstack/react-location';
+import { Link } from 'react-router-dom';
 
 export const Header = styled.header`
   padding: 1.5rem;

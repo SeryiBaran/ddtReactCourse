@@ -1,7 +1,8 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
 import photo from '@/img/ezh.jpg';
+
+import { generateKey } from '@/utils/key';
 
 import { Clock } from '@/components/Clock';
 import { Whoim } from '@/components/Whoim';
@@ -48,53 +49,46 @@ const StyledIndex = styled.div`
   padding: 0.8rem;
 `;
 
-export const Index: FC = () => {
+export const Index = () => {
   return (
     <StyledIndex id="index">
-      <Head>
-        <h1>Здравствуй, {NAME}!</h1>
-        <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
-      </Head>
-      <Indent />
-      <ClockH2>
-        Время: <Clock />
-      </ClockH2>
-      <Indent />
-      <Whoim />
-      <Indent />
-      <EffectTest />
-      <Indent />
-      <StateTest />
-      <Indent />
-      <Card
-        name="Ёж"
-        lastname="Ёжиков"
-        birth="2022"
-        gender="¯\_(ツ)_/¯"
-        diagnosis="Бурчит"
-        photo={photo}
-        photoDescription="В спокойном состоянии"
-      />
-      <Timer />
-      <Indent />
-      <CatsAPITest />
-      <Indent />
-      <ChartJsTest />
-      <Indent />
-      <InputTest />
-      <Indent />
-      <Counter />
-      <Indent />
-      <Button>123</Button>
-      <Indent />
-      <TableTest data={data} />
-      <Indent />
-      <ClassTest />
-      <Indent />
-      <UserCards />
-      <Indent />
-      <RecoilTest />
-      <RecoilTest />
+      {[
+        <Head>
+          <h1>Здравствуй, {NAME}!</h1>
+          <p>Этот сайт написан на React и бесплатно задеплоен на Vercel.App.</p>
+        </Head>,
+        <ClockH2>
+          Время: <Clock />
+        </ClockH2>,
+        <Whoim />,
+        <EffectTest />,
+        <StateTest />,
+        <Card
+          name="Ёж"
+          lastname="Ёжиков"
+          birth="2022"
+          gender="¯\_(ツ)_/¯"
+          diagnosis="Бурчит"
+          photo={photo}
+          photoDescription="В спокойном состоянии"
+        />,
+        <Timer />,
+        <CatsAPITest />,
+        <ChartJsTest />,
+        <InputTest />,
+        <Counter />,
+        <Button>123</Button>,
+        <TableTest data={data} />,
+        <ClassTest />,
+        <UserCards />,
+        <RecoilTest />,
+        <RecoilTest />,
+      ].map(elem => (
+        <>
+          <div key={generateKey()}>{elem}</div>
+          <Indent key={generateKey()} />
+        </>
+      ))}
     </StyledIndex>
   );
 };

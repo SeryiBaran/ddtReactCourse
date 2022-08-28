@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
@@ -43,7 +43,7 @@ const Name = styled.span`
   font-size: 130%;
 `;
 
-export const UserCards: FC = () => {
+export const UserCards = () => {
   const [users, setUsers] = useState([]);
 
   const fetchData = async () => {
@@ -67,7 +67,7 @@ export const UserCards: FC = () => {
 
   return (
     <Cards>
-      {users &&
+      {!!users &&
         users.map((user: IUser) => (
           <Card key={user.uuid}>
             <Img src={user.avatar} alt="Аватарка" />

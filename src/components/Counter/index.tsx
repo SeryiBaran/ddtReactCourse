@@ -1,10 +1,8 @@
-import { FC } from 'react';
-
 import { MiniButton } from '@/components/MiniButton';
 
 import { useCounter } from '@/hooks/useCounter';
 
-export const Counter: FC = () => {
+export const Counter = () => {
   const { counter, increment, decrement } = useCounter(0);
 
   return (

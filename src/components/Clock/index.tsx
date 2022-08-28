@@ -1,6 +1,6 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-export const Clock: FC = () => {
+export const Clock = () => {
   const [date, setDate] = useState<Date>(new Date());
   let timerID: number;
 

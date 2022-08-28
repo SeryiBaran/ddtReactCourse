@@ -1,8 +1,8 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 
 import { Input } from '@/components/Input';
 
-export const InputTest: FC = () => {
+export const InputTest = () => {
   const [value, setValue] = useState<string>('Это - управляемый input!');
 
   return (

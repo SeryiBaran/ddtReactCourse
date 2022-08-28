@@ -1,6 +1,8 @@
 import { FC, useState, useRef, KeyboardEvent } from 'react';
 import styled, { css } from 'styled-components';
 
+import { cs } from '@/utils/classes';
+
 const cardMoodInputLimit = 30;
 
 interface IStyledCardMood {
@@ -125,11 +127,7 @@ export const CardMood: FC = () => {
   function handleKeyInput(e: KeyboardEvent<HTMLInputElement>) {
     const target = e.target as HTMLInputElement;
 
-    if (target.value.length > cardMoodInputLimit) {
-      setValidInput(false);
-    } else {
-      setValidInput(true);
-    }
+    setValidInput(!!(target.value.length > cardMoodInputLimit));
   }
 
   return (
@@ -148,13 +146,11 @@ export const CardMood: FC = () => {
         ref={input}
       />
       <Button
-        className={[
+        className={cs([
           activeInput && 'fa-solid fa-circle-check',
           !activeInput && 'fa-solid fa-pencil',
           !validInput && 'fa-solid fa-circle-exclamation',
-        ]
-          .filter(e => !!e)
-          .join(' ')}
+        ])}
         {...(activeInput ? { title: 'Применить' } : { title: 'Редактировать' })}
         onClick={toogleActiveAndApply}
         {...{ valid: validInput }}

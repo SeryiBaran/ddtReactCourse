@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
@@ -15,7 +15,7 @@ const Img = styled.img`
   background-color: #91a7ff;
 `;
 
-export const CatsAPITest: FC = () => {
+export const CatsAPITest = () => {
   const [cat, setCat] = useState({
     url: '',
   });

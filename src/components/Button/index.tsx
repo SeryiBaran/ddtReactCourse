@@ -11,7 +11,7 @@ interface IButton {
   onClick?: () => void;
 }
 
-const ButtonStyled = styled.button.attrs(() => ({}))<IButtonStyled>`
+const ButtonStyled = styled.button<IButtonStyled>`
   display: flex;
   align-items: center;
   justify-content: center;

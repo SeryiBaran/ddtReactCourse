@@ -21,7 +21,7 @@ export const EffectTest: FC = () => {
       {count >= 50 && count < 100 && (
         <p>
           Вы, царь батюшка,{' '}
-          <span title="BASE64 encoded">0LXQsdCw0L3Rg9C70LjRgdGM</span>?
+          <span title="BASE64 encoded">0LTRg9GA0L7Rh9C+0LM=</span>?
         </p>
       )}
       {count >= 100 && count < 150 && <p>Новый рекорд!</p>}

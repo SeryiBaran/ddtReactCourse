@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
 interface ICardPhoto {
@@ -31,7 +30,7 @@ const DescriptionContent = styled.span`
   margin-left: 0.3em;
 `;
 
-export const CardPhoto: FC<ICardPhoto> = ({ photoUrl, photoDescription }) => {
+export const CardPhoto = ({ photoUrl, photoDescription }: ICardPhoto) => {
   return (
     <StyledCardPhoto>
       <Photo src={photoUrl} alt="Photo" />

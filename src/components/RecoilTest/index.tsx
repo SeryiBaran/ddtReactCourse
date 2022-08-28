@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
 
@@ -11,7 +10,7 @@ const StyledRecoilTest = styled.div`
   padding: 1rem;
 `;
 
-export const RecoilTest: FC = () => {
+export const RecoilTest = () => {
   const [GSInstance, setGSInstance] = useRecoilState<IGlobalState>(GlobalState);
   return (
     <StyledRecoilTest>

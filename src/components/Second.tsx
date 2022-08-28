@@ -1,6 +1,4 @@
-import { FC } from 'react';
-
-export const Second: FC = () => {
+export const Second = () => {
   return (
     <div>
       Это страница Second!

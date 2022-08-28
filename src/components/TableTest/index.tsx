@@ -1,4 +1,6 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
+
+import { generateKey } from '@/utils/key';
 
 interface ITableTest {
   data: {
@@ -7,16 +9,16 @@ interface ITableTest {
   };
 }
 
-export const TableTest: FC<ITableTest> = ({ data }) => {
+export const TableTest = ({ data }: ITableTest) => {
   const { thead, tbody } = data;
-  const theadContent = thead.map((elem: string | ReactNode, i: number) => {
-    return <th key={i}>{elem}</th>;
+  const theadContent = thead.map((elem: string | ReactNode) => {
+    return <th key={generateKey()}>{elem}</th>;
   });
-  const tbodyContent = tbody.map((elem: string[] | ReactNode[], i: number) => {
+  const tbodyContent = tbody.map((elem: string[] | ReactNode[]) => {
     return (
-      <tr key={i}>
-        {elem.map((elem2: string | ReactNode, i: number) => {
-          return <td key={i}>{elem2}</td>;
+      <tr key={generateKey()}>
+        {elem.map((elem2: string | ReactNode) => {
+          return <td key={generateKey()}>{elem2}</td>;
         })}
       </tr>
     );
