@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
-import '@/standard.css';
+import '@/sb.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import { generateKey } from '@/utils/key';
