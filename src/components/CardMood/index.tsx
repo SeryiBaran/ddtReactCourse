@@ -6,13 +6,13 @@ import { cs } from '@/utils/classes';
 const cardMoodInputLimit = 30;
 
 interface IStyledCardMood {
-  active?: boolean;
-  valid?: boolean;
+  isActive?: boolean;
+  isValid?: boolean;
 }
 
 interface IButton {
-  active?: boolean;
-  valid?: boolean;
+  isActive?: boolean;
+  isValid?: boolean;
 }
 
 const StyledCardMood = styled.div.attrs(() => ({}))<IStyledCardMood>`
@@ -35,13 +35,13 @@ const StyledCardMood = styled.div.attrs(() => ({}))<IStyledCardMood>`
     transition: 150ms;
   }
   ${props =>
-    props.active &&
+    props.isActive &&
     css`
       transform: scale(1.1);
       box-shadow: 0 0 1.5em 0.8em rgb(0 0 0 / 20%);
     `}
   ${props =>
-    !props.valid &&
+    !props.isValid &&
     css`
       border: solid red 0.1em;
       ::after {
@@ -82,13 +82,13 @@ const Button = styled.button.attrs(() => ({}))<IButton>`
     font-size: 1.4em;
   }
   ${props =>
-    props.active &&
+    props.isActive &&
     css`
       background-color: rgb(199 255 206);
       color: #0c7a00;
     `}
   ${props =>
-    !props.valid &&
+    !props.isValid &&
     css`
       background-color: rgb(255 199 199);
       color: #b80000;
@@ -99,24 +99,24 @@ const Button = styled.button.attrs(() => ({}))<IButton>`
     `}
 `;
 
-export const CardMood: FC = () => {
-  const [activeInput, setActiveInput] = useState<boolean>(false);
-  const [validInput, setValidInput] = useState<boolean>(true);
+export const CardMood = () => {
+  const [inputIsActive, setInputIsActive] = useState<boolean>(false);
+  const [inputIsValid, setInputIsValid] = useState<boolean>(true);
   const [mood, setMood] = useState<string>('Напыжился');
 
   const input = useRef<HTMLInputElement | null>(null);
 
   function toogleActiveAndApply() {
-    if (validInput && input.current) {
+    if (inputIsValid && input.current) {
       setMood(input.current.value);
-      setActiveInput(activeInput => !activeInput);
+      setInputIsActive(inputIsActive => !inputIsActive);
     }
   }
 
   function handleKeyDown(e: KeyboardEvent<HTMLDivElement>) {
     if (
-      activeInput &&
-      validInput &&
+      inputIsActive &&
+      inputIsValid &&
       (e.code == 'Enter' || e.keyCode === 13 || e.code == 'NumpadEnter')
     ) {
       e.preventDefault();
@@ -126,34 +126,34 @@ export const CardMood: FC = () => {
 
   function handleKeyInput(e: KeyboardEvent<HTMLInputElement>) {
     const target = e.target as HTMLInputElement;
-    setValidInput(target.value.length < cardMoodInputLimit);
+    setInputIsValid(target.value.length <= cardMoodInputLimit);
   }
 
   return (
     <StyledCardMood
       onKeyDown={handleKeyDown}
       data-tooltip={`Нельзя вводить более ${cardMoodInputLimit} символов!`}
-      {...{ valid: validInput }}
-      {...{ active: activeInput }}
+      {...{ isValid: inputIsValid }}
+      {...{ isActive: inputIsActive }}
     >
       <Input
         type="text"
         defaultValue={mood}
-        {...(!activeInput && { readOnly: true })}
+        {...(!inputIsActive && { readOnly: true })}
         onKeyDown={handleKeyInput}
         onKeyUp={handleKeyInput}
         ref={input}
       />
       <Button
         className={cs([
-          activeInput && 'fa-solid fa-circle-check',
-          !activeInput && 'fa-solid fa-pencil',
-          !validInput && 'fa-solid fa-circle-exclamation',
+          inputIsActive && 'fa-solid fa-circle-check',
+          !inputIsActive && 'fa-solid fa-pencil',
+          !inputIsValid && 'fa-solid fa-circle-exclamation',
         ])}
-        {...(activeInput ? { title: 'Применить' } : { title: 'Редактировать' })}
+        {...(inputIsActive ? { title: 'Применить' } : { title: 'Редактировать' })}
         onClick={toogleActiveAndApply}
-        {...{ valid: validInput }}
-        {...{ active: activeInput }}
+        {...{ isValid: inputIsValid }}
+        {...{ isActive: inputIsActive }}
       />
     </StyledCardMood>
   );
