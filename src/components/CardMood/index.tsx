@@ -126,8 +126,7 @@ export const CardMood: FC = () => {
 
   function handleKeyInput(e: KeyboardEvent<HTMLInputElement>) {
     const target = e.target as HTMLInputElement;
-
-    setValidInput(!!(target.value.length > cardMoodInputLimit));
+    setValidInput(target.value.length < cardMoodInputLimit);
   }
 
   return (
