@@ -1,5 +1,7 @@
 # ddtReactCourse
 
+# !Говнокод!
+
 ![Vercel status](https://therealsujitk-vercel-badge.vercel.app/?app=ddt-react-course)
 
 ## How to start development server
